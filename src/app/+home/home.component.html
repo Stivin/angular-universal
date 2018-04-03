@@ -1,0 +1,9 @@
+<h3>{{ message }}</h3>
+<ul>
+    <li *ngFor="let feature of result?.features">
+        {{ feature.properties.city }} -
+        {{ feature.properties.label }} -
+        {{ feature.properties.postcode }} -
+        {{ feature.properties.type }}
+    </li>
+</ul>
