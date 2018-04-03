@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ConfigService } from '@ngx-config/core';
+// import { ConfigService } from '@ngx-config/core';
 import { MetaService } from '@ngx-meta/core';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -11,18 +11,22 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent implements OnInit {
   public title: string;
 
-  constructor(private readonly config: ConfigService,
-              private readonly translate: TranslateService,
-              private readonly meta: MetaService) {
+  constructor(// private readonly config: ConfigService,
+    private readonly translate: TranslateService,
+    private readonly meta: MetaService) {
   }
 
   ngOnInit(): void {
     this.title = 'fulls1z3\'s example app';
-    const defaultLanguage = this.config.getSettings('i18n.defaultLanguage');
+    // const defaultLanguage = this.config.getSettings('i18n.defaultLanguage');
+    const defaultLanguage = { 'code': 'en', 'name': 'English', 'culture': 'en-US' };
 
     // add available languages & set default language
-    this.translate.addLangs(this.config.getSettings('i18n.availableLanguages')
-      .map((language: any) => language.code));
+    // this.translate.addLangs(this.config.getSettings('i18n.availableLanguages').map((language: any) => language.code));
+    this.translate.addLangs([
+      { 'code': 'en', 'name': 'English', 'culture': 'en-US' },
+      { 'code': 'tr', 'name': 'Türkçe', 'culture': 'tr-TR' }
+    ].map((language: any) => language.code));
     this.translate.setDefaultLang(defaultLanguage.code);
 
     this.meta.setTag('og:locale', defaultLanguage.culture);

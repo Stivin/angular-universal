@@ -6,7 +6,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { SharedTranslateServerLoaderService } from './shared-translate-server-loader.service';
 
 export function translateFactory(transferState: TransferState) {
-  return new SharedTranslateServerLoaderService('./dist/assets/i18n', '.json', transferState);
+  return new SharedTranslateServerLoaderService('./dist/server/assets/i18n', '.json', transferState);
 }
 
 @NgModule({
