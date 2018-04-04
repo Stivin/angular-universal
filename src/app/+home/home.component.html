@@ -1,4 +1,6 @@
-<h3>{{ message }}</h3>
+<h1>{{ 'HOME.TITLE' | translate }}</h1>
+<p>{{ 'HOME.DESC' | translate }}</p>
+
 <ul>
     <li *ngFor="let feature of result?.features">
         {{ feature.properties.city }} -

@@ -1,26 +1,28 @@
 import { NgModule } from '@angular/core';
 import { ServerModule, ServerTransferStateModule } from '@angular/platform-server';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 
 import { SharedTranslateServerModule } from './shared/shared-translate/shared-translate-server.module';
-import { SharedMetaModule } from './shared/shared-meta/shared-meta.module';
+import { ServerStorage } from './shared/shared-storage/server.storage';
+import { AppStorage } from './shared/shared-storage/storage.inject';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
-    // The AppServerModule should import your AppModule followed
-    // by the ServerModule from @angular/platform-server.
     AppModule,
+    NoopAnimationsModule,
     ServerModule,
-    ModuleMapLoaderModule,
     ServerTransferStateModule,
+    ModuleMapLoaderModule,
     SharedTranslateServerModule,
-    // SharedMetaModule,
   ],
-  // Since the bootstrapped component is not inherited from your
-  // imported AppModule, it needs to be repeated here.
+  providers: [
+    { provide: AppStorage, useClass: ServerStorage }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppServerModule {

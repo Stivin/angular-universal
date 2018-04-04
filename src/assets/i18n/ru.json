@@ -13,11 +13,11 @@
   "PUBLIC.ABOUT_APPLE_PEAR.PAGE_TITLE": "Apple or pear",
   "PUBLIC.ABOUT_APPLE_PEAR.META_DESCRIPTION": "I want an apple but you give me a pear, shame on you",
   "MENU": {
-    "HOME": "Home",
-    "ABOUT": "About"
+    "HOME": "Главная",
+    "ABOUT": "О нас"
   },
   "HOME": {
-    "TITLE": "Home page",
-    "DESC": "Description for the home page"
+    "TITLE": "Главная страница",
+    "DESC": "Описание для главной страницы"
   }
 }

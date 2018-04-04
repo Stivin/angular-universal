@@ -1,14 +1,25 @@
-<h1>
-    {{ title }}
-</h1>
+<h1>{{ title }}</h1>
+
 <br/>
-<a [routerLink]="['change-language', 'en']">English!</a>
-<a [routerLink]="['change-language', 'tr']">Turkish!</a>
+
+<ng-template ngFor let-lang [ngForOf]="langList">
+    <button (click)="changeLang(lang)">{{ lang.name }}</button>
+</ng-template>
+
 <br/><br/>
-<a [routerLink]="['']">Home</a>
-<a [routerLink]="['about']">About</a>
+
+<a [routerLink]="['']">{{ 'MENU.HOME' | translate }}</a>
+|
+<a [routerLink]="['about']">{{ 'MENU.ABOUT' | translate }}</a>
+|
 <a [routerLink]="['about', 'us', 22]">About us</a>
+|
 <a [routerLink]="['about', 'banana']">Banana Republic</a>
+|
 <a [routerLink]="['about', 'apple', 6, 'pear']">(apple || pear)</a>
-<br/><br/>
+
+<br/>
+<hr>
+<br/>
+
 <router-outlet></router-outlet>

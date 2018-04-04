@@ -19,7 +19,7 @@ export function metaFactory(translate: TranslateService): MetaLoader {
       'og:locale': 'en-US',
       'og:locale:alternate': [
         { 'code': 'en', 'name': 'English', 'culture': 'en-US' },
-        { 'code': 'tr', 'name': 'Türkçe', 'culture': 'tr-TR' }
+        { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU' }
       ].map((language: any) => language.culture).toString()
     }
   });

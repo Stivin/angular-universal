@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-import { SharedTranslateBrowserModule } from './shared/shared-translate/shared-translate-browser.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { CookieService } from 'ngx-cookie-service';
+
 import { SharedMetaModule } from './shared/shared-meta/shared-meta.module';
-// import { SharedConfigModule } from './shared/shared-config/shared-config.module';
 
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
@@ -13,17 +14,13 @@ import { AppComponent } from './app.component';
 @NgModule({
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
-    BrowserTransferStateModule,
     HttpClientModule,
-    // RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
     RouterModule.forRoot(routes),
-    SharedTranslateBrowserModule,
     SharedMetaModule,
-    // SharedConfigModule,
-    // TransferHttpCacheModule
+    TranslateModule,
   ],
   declarations: [AppComponent],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
