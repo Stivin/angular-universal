@@ -5,14 +5,12 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-  public message: string;
   public result: any;
 
-  constructor(private http: HttpClient) {
+  constructor(private _http: HttpClient) {
   }
 
   ngOnInit(): void {
-    this.message = 'Hello';
-    this.http.get('https://api-adresse.data.gouv.fr/search/?q=seclin').subscribe(res => this.result = res);
+    this._http.get('https://api-adresse.data.gouv.fr/search/?q=seclin').subscribe(res => this.result = res);
   }
 }

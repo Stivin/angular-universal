@@ -1,9 +1,9 @@
-// angular
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-// routes & components
+import { SharedModule } from '../shared/shared.module';
+
 import { routes } from './about.routes';
 import { AboutComponent } from './about.component';
 import { AboutUsComponent } from './about-us.component';
@@ -13,7 +13,8 @@ import { AboutApplePearComponent } from './about-apple-pear.component';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedModule,
   ],
   declarations: [
     AboutComponent,

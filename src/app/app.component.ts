@@ -19,7 +19,7 @@ const LANG_DEFAULT: ILang = { 'code': 'ru', 'name': 'Русский', 'culture':
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  template: '<router-outlet></router-outlet>'
 })
 export class AppComponent implements OnInit {
   public title: string;
