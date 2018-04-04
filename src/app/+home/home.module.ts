@@ -4,13 +4,13 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 
-import { routes } from './home.routes';
+import { ROUTES } from './home.routing';
 import { HomeComponent } from './home.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
+    RouterModule.forChild(ROUTES),
     SharedModule,
   ],
   declarations: [HomeComponent]
