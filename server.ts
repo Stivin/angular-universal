@@ -3,10 +3,13 @@ import 'reflect-metadata';
 import { enableProdMode } from '@angular/core';
 // Express Engine
 import { ngExpressEngine } from '@nguniversal/express-engine';
+import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
 // Import module map for lazy loading
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 
 import * as express from 'express';
+import * as compression from 'compression';
+import * as cookieParser from 'cookie-parser';
 import { join } from 'path';
 
 // Faster server renders w/ Prod mode (dev mode never needed)
@@ -14,6 +17,8 @@ enableProdMode();
 
 // Express server
 const app = express();
+app.use(compression());
+app.use(cookieParser());
 
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist');
@@ -43,7 +48,14 @@ app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
 
 // ALl regular routes use the Universal engine
 app.get('*', (req, res) => {
-  res.render('index', { req });
+  res.render('index', {
+    req: req,
+    res: res,
+    providers: [
+      { provide: REQUEST, useValue: (req) },
+      { provide: RESPONSE, useValue: (res) },
+    ]
+  });
 });
 
 // Start up the Node server
