@@ -1,9 +1,7 @@
-// angular
 import { Component } from '@angular/core';
 
 @Component({
-  template: `ng-seed about page<br/>
-  This page provides a dummy overview of nothing`
+  templateUrl: './about.component.html'
 })
 export class AboutComponent {
 }

@@ -5,6 +5,7 @@ import { TransferState } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 import { SharedTranslateBrowserLoaderService } from './shared-translate-browser-loader.service';
+import { SharedTranslateService } from './shared-translate.service';
 
 export function translateStaticLoader(http: HttpClient, transferState: TransferState) {
   return new SharedTranslateBrowserLoaderService('/assets/i18n/', '.json', transferState, http);
@@ -21,6 +22,7 @@ export function translateStaticLoader(http: HttpClient, transferState: TransferS
       }
     ),
   ],
+  providers: [SharedTranslateService]
 })
 export class SharedTranslateBrowserModule {
 }

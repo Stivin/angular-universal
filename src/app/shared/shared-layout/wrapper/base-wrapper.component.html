@@ -1,4 +1,10 @@
 <app-toolbar></app-toolbar>
+
+<a [routerLink]="['']">{{ 'MENU.HOME' | translate }}</a>
+|
+<a [routerLink]="['about']">{{ 'MENU.ABOUT' | translate }}</a>
+
+
 <main role="main">
     <router-outlet></router-outlet>
 </main>

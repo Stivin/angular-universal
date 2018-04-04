@@ -1,2 +1,3 @@
 <p>Toolbar Component</p>
+<button *ngFor="let lang of langList$ | async" (click)="changeLang(lang)">{{ lang.name }}</button>
 <hr>

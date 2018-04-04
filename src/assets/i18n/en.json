@@ -19,5 +19,9 @@
   "HOME": {
     "TITLE": "Home page",
     "DESC": "Description for the home page"
+  },
+  "ABOUT": {
+    "TITLE": "About",
+    "DESC": "Description for the about page"
   }
 }
