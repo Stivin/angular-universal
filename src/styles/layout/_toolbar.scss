@@ -26,13 +26,22 @@ app-toolbar {
       }
     }
   }
-  .toolbar__logo {
+  app-toolbar-logo {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 140px;
+    height: inherit;
     color: #fff;
+    text-align: center;
     font-weight: 500;
     padding: 10px;
+    .toolbar-logo__first {
+      font-size: 16px;
+    }
+    .toolbar-logo__second {
+      font-size: 12px;
+    }
   }
   app-toolbar-menu {
     display: block;
