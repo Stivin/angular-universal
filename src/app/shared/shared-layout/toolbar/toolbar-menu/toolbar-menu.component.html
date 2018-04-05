@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let link of linkList">
+        <a [routerLink]="[link.url]" routerLinkActive="active">{{ link.name | translate }}</a>
+    </li>
+</ul>

@@ -1,14 +1,3 @@
-<div class="toolbar-lang-setting" #langMenu>
-    <div class="toolbar-lang-setting__button" (click)="onToggleLangMenu()">
-        <span class="material-icons visual-label">public</span>
-        <span class="material-icons">arrow_drop_down</span>
-    </div>
-    <div class="toolbar-lang-setting__menu" [class.toolbar-lang-setting__menu_show]="isShowMenu">
-        <div class="toolbar-lang-setting__menu_header">Язык сайта</div>
-        <ul>
-            <li *ngFor="let lang of langList$ | async">
-                <a (click)="changeLang(lang)">{{ lang.name }}</a>
-            </li>
-        </ul>
-    </div>
-</div>
+<div class="toolbar__logo">Angular RU Universal</div>
+<app-toolbar-menu></app-toolbar-menu>
+<app-toolbar-lang></app-toolbar-lang>

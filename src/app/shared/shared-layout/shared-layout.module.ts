@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { BaseWrapperComponent } from './wrapper/base-wrapper.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ToolbarComponent, ToolbarLangComponent, ToolbarMenuComponent } from './toolbar';
 
 @NgModule({
   imports: [
@@ -15,7 +15,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
   ],
   declarations: [
     BaseWrapperComponent,
-    ToolbarComponent,
+    ToolbarComponent, ToolbarLangComponent, ToolbarMenuComponent,
   ]
 })
 export class SharedLayoutModule {
