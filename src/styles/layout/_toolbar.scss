@@ -7,6 +7,25 @@ app-toolbar {
   height: $toolbar-height;
   background-color: $toolbar-color-bg;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  .toolbar__block_left {
+    display: flex;
+    flex: 1;
+  }
+  .toolbar__github {
+    height: inherit;
+    a {
+      display: block;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-decoration: none;
+      padding: 18px 15px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
   .toolbar__logo {
     display: flex;
     justify-content: center;
@@ -45,9 +64,6 @@ app-toolbar {
     display: block;
     height: inherit;
     .toolbar-lang-setting {
-      position: absolute;
-      top: 0;
-      right: 0;
       width: 83px;
       height: inherit;
       .toolbar-lang-setting__button {
