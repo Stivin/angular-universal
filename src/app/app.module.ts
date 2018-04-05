@@ -6,8 +6,7 @@ import { RouterModule } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
 import { SharedModule } from './shared/shared.module';
-import { SharedLayoutModule } from './shared/shared-layout/shared-layout.module';
-import { SharedMetaModule } from './shared/shared-meta/shared-meta.module';
+import { CoreModule } from './shared/core.module';
 
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
@@ -18,8 +17,7 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     RouterModule.forRoot(routes),
     SharedModule.forRoot(),
-    SharedLayoutModule,
-    SharedMetaModule,
+    CoreModule.forRoot(),
   ],
   declarations: [AppComponent],
   providers: [CookieService],
