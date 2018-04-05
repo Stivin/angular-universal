@@ -1,11 +1,16 @@
-<h1>{{ 'HOME.TITLE' | translate }}</h1>
-<p>{{ 'HOME.DESC' | translate }}</p>
+<app-header>
+    <h1>{{ 'HOME.TITLE' | translate }}</h1>
+    <h2>{{ 'HOME.DESC' | translate }}</h2>
+</app-header>
 
-<ul>
-    <li *ngFor="let feature of result?.features">
-        {{ feature.properties.city }} -
-        {{ feature.properties.label }} -
-        {{ feature.properties.postcode }} -
-        {{ feature.properties.type }}
-    </li>
-</ul>
+<app-widget>
+    <ul>
+        <li *ngFor="let feature of result?.features">
+            {{ feature.properties.city }} -
+            {{ feature.properties.label }} -
+            {{ feature.properties.postcode }} -
+            {{ feature.properties.type }}
+        </li>
+    </ul>
+</app-widget>
+

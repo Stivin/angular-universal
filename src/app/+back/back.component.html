@@ -1,8 +1,12 @@
-<h1>{{ 'BACK.TITLE' | translate }}</h1>
-<p>{{ 'BACK.DESC' | translate }}</p>
+<app-header>
+    <h1>{{ 'BACK.TITLE' | translate }}</h1>
+    <p>{{ 'BACK.DESC' | translate }}</p>
+</app-header>
 
-<h4>{{ 'BACK.POST_REQUEST' | translate }}</h4>
-<pre>{{ data | json }}</pre>
+<app-widget [title]="'BACK.POST_REQUEST' | translate">
+    <pre>{{ data | json }}</pre>
+</app-widget>
 
-<h4>{{ 'BACK.GET_REQUEST' | translate }}</h4>
-<pre>{{ dataDelay | json }}</pre>
+<app-widget [title]="'BACK.GET_REQUEST' | translate">
+    <pre>{{ dataDelay | json }}</pre>
+</app-widget>

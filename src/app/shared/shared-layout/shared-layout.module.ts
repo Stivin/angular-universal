@@ -4,8 +4,10 @@ import { RouterModule } from '@angular/router';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { BaseWrapperComponent } from './wrapper/base-wrapper.component';
+import { HeaderComponent } from './header/header.component';
 import { ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent } from './toolbar';
+import { WidgetComponent, WidgetContentComponent, WidgetToolbarComponent } from './widget';
+import { BaseWrapperComponent } from './wrapper/base-wrapper.component';
 
 @NgModule({
   imports: [
@@ -14,8 +16,14 @@ import { ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMe
     TranslateModule.forChild(),
   ],
   declarations: [
-    BaseWrapperComponent,
+    HeaderComponent,
     ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent,
+    WidgetComponent, WidgetContentComponent, WidgetToolbarComponent,
+    BaseWrapperComponent,
+  ],
+  exports: [
+    HeaderComponent,
+    WidgetComponent, WidgetContentComponent, WidgetToolbarComponent,
   ]
 })
 export class SharedLayoutModule {
