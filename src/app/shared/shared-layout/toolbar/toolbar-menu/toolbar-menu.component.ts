@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 const LINK_LIST: any[] = [
   { url: '/home', name: 'MENU.HOME' },
+  { url: '/back', name: 'MENU.BACK' },
   { url: '/about', name: 'MENU.ABOUT' }
 ];
 

@@ -14,11 +14,18 @@
   "PUBLIC.ABOUT_APPLE_PEAR.META_DESCRIPTION": "I want an apple but you give me a pear, shame on you",
   "MENU": {
     "HOME": "Home",
+    "BACK": "Request for backend",
     "ABOUT": "About"
   },
   "HOME": {
     "TITLE": "Home page",
     "DESC": "Description for the home page"
+  },
+  "BACK": {
+    "TITLE": "Request for backend",
+    "DESC": "Description for the request for backend",
+    "GET_REQUEST": "GET request with a delay of 3 seconds",
+    "POST_REQUEST": "POST request"
   },
   "ABOUT": {
     "TITLE": "About",

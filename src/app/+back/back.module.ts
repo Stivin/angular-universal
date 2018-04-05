@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 
-import { ROUTES } from './about.routing';
-import { AboutComponent } from './about.component';
+import { ROUTES } from './back.routing';
+import { BackComponent } from './back.component';
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import { AboutComponent } from './about.component';
     RouterModule.forChild(ROUTES),
     SharedModule,
   ],
-  declarations: [AboutComponent]
+  declarations: [BackComponent]
 })
-export class AboutModule {
+export class BackModule {
 }

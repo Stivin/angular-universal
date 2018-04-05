@@ -11,6 +11,7 @@ export const routes: Routes = [
   {
     path: '', component: BaseWrapperComponent, children: [
       { path: 'home', loadChildren: './+home/home.module#HomeModule', pathMatch: 'full' },
+      { path: 'back', loadChildren: './+back/back.module#BackModule' },
       { path: 'about', loadChildren: './+about/about.module#AboutModule' }
     ],
     canActivateChild: [MetaGuard], data: { i18n: { isRoot: true } }

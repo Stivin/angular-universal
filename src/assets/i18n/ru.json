@@ -14,11 +14,18 @@
   "PUBLIC.ABOUT_APPLE_PEAR.META_DESCRIPTION": "I want an apple but you give me a pear, shame on you",
   "MENU": {
     "HOME": "Главная",
+    "BACK": "Запрос на backend",
     "ABOUT": "О нас"
   },
   "HOME": {
     "TITLE": "Главная страница",
     "DESC": "Описание для главной страницы"
+  },
+  "BACK": {
+    "TITLE": "Запрос на backend",
+    "DESC": "Описание для страницы с запросом на backend",
+    "GET_REQUEST": "GET запрос с задержкой в 3 секунды",
+    "POST_REQUEST": "POST запрос"
   },
   "ABOUT": {
     "TITLE": "О нас",

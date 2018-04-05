@@ -8,8 +8,8 @@ export const ROUTES: Routes = [
     component: AboutComponent,
     data: {
       meta: {
-        title: 'PUBLIC.ABOUT.PAGE_TITLE',
-        description: 'PUBLIC.ABOUT.META_DESCRIPTION'
+        title: 'ABOUT.TITLE',
+        description: 'ABOUT.DESC'
       }
     }
   }
