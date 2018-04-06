@@ -5,8 +5,8 @@ import { TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Observable } from 'rxjs/Observable';
 
-const PREFIX = 'i18n';
-const SUFFIX = '.json';
+const PREFIX: string = 'i18n';
+const SUFFIX: string = '.json';
 
 export class SharedTranslateBrowserLoaderService implements TranslateLoader {
   constructor(private _prefix: string = PREFIX,

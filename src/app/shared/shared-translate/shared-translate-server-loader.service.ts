@@ -3,10 +3,10 @@ import { makeStateKey, StateKey, TransferState } from '@angular/platform-browser
 import { TranslateLoader } from '@ngx-translate/core';
 import { Observable } from 'rxjs/Observable';
 
-const FS = require('fs');
-const PREFIX = 'i18n';
-const SUFFIX = '.json';
-const FORMAT = 'utf8';
+const FS: any = require('fs');
+const PREFIX: string = 'i18n';
+const SUFFIX: string = '.json';
+const FORMAT: string = 'utf8';
 
 export class SharedTranslateServerLoaderService implements TranslateLoader {
   constructor(private _prefix: string = PREFIX,

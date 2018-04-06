@@ -36,11 +36,15 @@ app-toolbar {
     text-align: center;
     font-weight: 500;
     padding: 10px;
-    .toolbar-logo__first {
-      font-size: 16px;
-    }
-    .toolbar-logo__second {
-      font-size: 12px;
+    .toolbar-logo__link {
+      color: inherit;
+      text-decoration: none;
+      .toolbar-logo__first {
+        font-size: 16px;
+      }
+      .toolbar-logo__second {
+        font-size: 12px;
+      }
     }
   }
   app-toolbar-menu {
