@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { SharedTransferHttpService } from '../shared/shared-transfer-http/shared-transfer-http.service';
+
 @Component({
   templateUrl: './back.component.html'
 })
@@ -8,7 +10,8 @@ export class BackComponent implements OnInit {
   public data: any;
   public dataDelay: any;
 
-  constructor(private _http: HttpClient) {
+  constructor(private _http: HttpClient,
+              private _transferHttp: SharedTransferHttpService) {
   }
 
   ngOnInit(): void {
@@ -25,6 +28,6 @@ export class BackComponent implements OnInit {
   }
 
   private _getDelayData(): void {
-    this._http.get('https://reqres.in/api/users?delay=3').subscribe(res => this.dataDelay = res);
+    this._transferHttp.get('https://reqres.in/api/users?delay=3').subscribe(res => this.dataDelay = res);
   }
 }

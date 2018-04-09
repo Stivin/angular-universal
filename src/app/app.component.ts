@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import 'rxjs/add/operator/do';
 
 import { SharedTranslateService } from './shared/shared-translate';
 
