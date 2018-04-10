@@ -24,10 +24,10 @@ export class BackComponent implements OnInit {
       name: 'morpheus',
       job: 'leader'
     };
-    this._http.post('https://reqres.in/api/users', params).subscribe(res => this.data = res);
+    this._transferHttp.post('https://reqres.in/api/users', params).subscribe(res => this.data = res);
   }
 
   private _getDelayData(): void {
-    this._transferHttp.get('https://reqres.in/api/users?delay=3').subscribe(res => this.dataDelay = res);
+    this._http.get('https://reqres.in/api/users?delay=3').subscribe(res => this.dataDelay = res);
   }
 }
