@@ -1,5 +1,7 @@
-const PATH = require('path');
-const WEBPACK = require('webpack');
+// Work around for https://github.com/angular/angular-cli/issues/7200
+
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -11,10 +13,10 @@ module.exports = {
   target: 'node',
   resolve: { extensions: ['.ts', '.js'] },
   // Make sure we include all node_modules etc
-  externals: [/(node_modules|main\..*\.js)/],
+  externals: [/(node_modules|main\..*\.js)/,],
   output: {
     // Puts the output at the root of the dist folder
-    path: PATH.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist'),
     filename: '[name].js'
   },
   module: {
@@ -23,17 +25,17 @@ module.exports = {
     ]
   },
   plugins: [
-    new WEBPACK.ContextReplacementPlugin(
+    new webpack.ContextReplacementPlugin(
       // fixes WARNING Critical dependency: the request of a dependency is an expression
       /(.+)?angular(\\|\/)core(.+)?/,
-      PATH.join(__dirname, 'src'), // location of your src
+      path.join(__dirname, 'src'), // location of your src
       {} // a map of your routes
     ),
-    new WEBPACK.ContextReplacementPlugin(
+    new webpack.ContextReplacementPlugin(
       // fixes WARNING Critical dependency: the request of a dependency is an expression
       /(.+)?express(\\|\/)(.+)?/,
-      PATH.join(__dirname, 'src'),
+      path.join(__dirname, 'src'),
       {}
     )
   ]
-};
+}
