@@ -7,7 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HeaderComponent } from './header/header.component';
 import { ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent } from './toolbar';
 import { WidgetComponent, WidgetContentComponent, WidgetToolbarComponent } from './widget';
-import { WrapperAuthComponent, WrapperCommonComponent, WrapperNotFoundComponent } from './wrapper';
+import { WrapperCommonComponent, WrapperNotFoundComponent } from './wrapper';
 
 @NgModule({
   imports: [
@@ -19,7 +19,7 @@ import { WrapperAuthComponent, WrapperCommonComponent, WrapperNotFoundComponent 
     HeaderComponent,
     ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent,
     WidgetComponent, WidgetContentComponent, WidgetToolbarComponent,
-    WrapperAuthComponent, WrapperCommonComponent, WrapperNotFoundComponent,
+    WrapperCommonComponent, WrapperNotFoundComponent,
   ],
   exports: [
     HeaderComponent,

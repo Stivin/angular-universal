@@ -1,17 +1,16 @@
 import { Routes } from '@angular/router';
 
-import { WrapperAuthComponent } from '../shared/layout/wrapper';
-
-import { LoginComponent } from './+login/login.component';
-import { RegComponent } from './+reg/reg.component';
-import { RestoreComponent } from './+restore/restore.component';
+import { AuthComponent } from './auth.component';
+import { LoginComponent } from './+login';
+import { RegComponent } from './+reg';
+import { RestoreComponent } from './+restore';
 
 const DEFAULT_REDIRECT: string = 'login';
 
 export const ROUTES: Routes = [
   { path: '', redirectTo: DEFAULT_REDIRECT, pathMatch: 'full' },
   {
-    path: '', component: WrapperAuthComponent, children: [
+    path: '', component: AuthComponent, children: [
       {
         path: 'login', component: LoginComponent,
         data: { meta: { title: 'AUTH.LOGIN.TITLE', description: 'AUTH.LOGIN.DESC' } }

@@ -5,9 +5,10 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 
 import { ROUTES } from './auth.routing';
-import { LoginComponent } from './+login/login.component';
-import { RegComponent } from './+reg/reg.component';
-import { RestoreComponent } from './+restore/restore.component';
+import { AuthComponent } from './auth.component';
+import { LoginComponent, LoginService } from './+login';
+import { RegComponent, RegService } from './+reg';
+import { RestoreComponent, RestoreService } from './+restore';
 
 @NgModule({
   imports: [
@@ -16,9 +17,15 @@ import { RestoreComponent } from './+restore/restore.component';
     SharedModule,
   ],
   declarations: [
+    AuthComponent,
     LoginComponent,
     RegComponent,
     RestoreComponent,
+  ],
+  providers: [
+    LoginService,
+    RegService,
+    RestoreService,
   ]
 })
 export class AuthModule {
