@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 const PREFIX: string = 'i18n';
 const SUFFIX: string = '.json';
 
-export class SharedTranslateBrowserLoaderService implements TranslateLoader {
+export class TranslateBrowserLoaderService implements TranslateLoader {
   constructor(private _prefix: string = PREFIX,
               private _suffix: string = SUFFIX,
               private _transferState: TransferState,

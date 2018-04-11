@@ -7,7 +7,7 @@ import { REQUEST } from '@nguniversal/express-engine/tokens';
 
 import { APP_STORAGE } from './shared/storage/storage.inject';
 import { BrowserStorage } from './shared/storage/browser.storage';
-import { SharedTranslateBrowserModule } from './shared/shared-translate/shared-translate-browser.module';
+import { TranslateBrowserModule } from './shared/translate/translate-browser.module';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
@@ -22,7 +22,7 @@ export function getRequest(): any {
     BrowserAnimationsModule,
     TransferHttpCacheModule,
     BrowserTransferStateModule,
-    SharedTranslateBrowserModule,
+    TranslateBrowserModule,
   ],
   providers: [
     { provide: REQUEST, useFactory: (getRequest) },

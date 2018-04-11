@@ -1,11 +1,11 @@
 import { Inject, Injectable } from '@angular/core';
 
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService as NGXTranslateService } from '@ngx-translate/core';
 import { MetaService } from '@ngx-meta/core';
 import { Observable } from 'rxjs/Observable';
 
 import { APP_STORAGE } from '../storage/storage.inject';
-import { ILang } from './shared-translate.interface';
+import { ILang } from './translate.interface';
 
 const LANG_LIST: ILang[] = [
   { 'code': 'en', 'name': 'English', 'culture': 'en-US' },
@@ -14,9 +14,9 @@ const LANG_LIST: ILang[] = [
 const LANG_DEFAULT: ILang = { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU' };
 
 @Injectable()
-export class SharedTranslateService {
+export class TranslateService {
   constructor(@Inject(APP_STORAGE) private _appStorage: Storage,
-              private readonly _translate: TranslateService,
+              private readonly _translate: NGXTranslateService,
               private readonly _meta: MetaService) {
   }
 

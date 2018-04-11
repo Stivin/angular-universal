@@ -4,7 +4,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 
-import { SharedTranslateServerModule } from './shared/shared-translate/shared-translate-server.module';
+import { TranslateServerModule } from './shared/translate/translate-server.module';
 import { ServerStorage } from './shared/storage/server.storage';
 import { APP_STORAGE } from './shared/storage/storage.inject';
 
@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
     ServerModule,
     ServerTransferStateModule,
     ModuleMapLoaderModule,
-    SharedTranslateServerModule,
+    TranslateServerModule,
   ],
   providers: [
     { provide: APP_STORAGE, useClass: ServerStorage }

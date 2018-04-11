@@ -3,11 +3,11 @@ import { TransferState } from '@angular/platform-browser';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
-import { SharedTranslateServerLoaderService } from './shared-translate-server-loader.service';
-import { SharedTranslateService } from './shared-translate.service';
+import { TranslateServerLoaderService } from './translate-server-loader.service';
+import { TranslateService } from './translate.service';
 
 export function translateFactory(transferState: TransferState) {
-  return new SharedTranslateServerLoaderService('./dist/server/assets/i18n', '.json', transferState);
+  return new TranslateServerLoaderService('./dist/server/assets/i18n', '.json', transferState);
 }
 
 @NgModule({
@@ -20,7 +20,7 @@ export function translateFactory(transferState: TransferState) {
       }
     }),
   ],
-  providers: [SharedTranslateService]
+  providers: [TranslateService]
 })
-export class SharedTranslateServerModule {
+export class TranslateServerModule {
 }

@@ -1,7 +1,7 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { ILang, SharedTranslateService } from '../../../shared-translate';
+import { ILang, TranslateService } from '../../../translate';
 
 @Component({
   selector: 'app-toolbar-lang',
@@ -12,15 +12,15 @@ export class ToolbarLangComponent implements OnInit {
   public langList$: Observable<ILang[]>;
   public isShowMenu: boolean = false;
 
-  constructor(private _sharedTranslateService: SharedTranslateService) {
+  constructor(private _translateService: TranslateService) {
   }
 
   ngOnInit(): void {
-    this.langList$ = this._sharedTranslateService.getLangList();
+    this.langList$ = this._translateService.getLangList();
   }
 
   public changeLang(lang: ILang): void {
-    this._sharedTranslateService.changeLang(lang);
+    this._translateService.changeLang(lang);
     this.isShowMenu = false;
   }
 

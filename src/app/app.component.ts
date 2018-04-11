@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import 'rxjs/add/operator/do';
 
-import { SharedTranslateService } from './shared/shared-translate';
+import { TranslateService } from './shared/translate';
 
 @Component({
   selector: 'app-root',
   template: '<router-outlet></router-outlet>'
 })
 export class AppComponent implements OnInit {
-  constructor(private _sharedTranslateService: SharedTranslateService) {
+  constructor(private _translateService: TranslateService) {
   }
 
   ngOnInit(): void {
-    this._sharedTranslateService.initLanguage();
+    this._translateService.initLanguage();
   }
 }

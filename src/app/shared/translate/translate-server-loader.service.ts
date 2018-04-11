@@ -8,7 +8,7 @@ const PREFIX: string = 'i18n';
 const SUFFIX: string = '.json';
 const FORMAT: string = 'utf8';
 
-export class SharedTranslateServerLoaderService implements TranslateLoader {
+export class TranslateServerLoaderService implements TranslateLoader {
   constructor(private _prefix: string = PREFIX,
               private _suffix: string = 'SUFFIX',
               private _transferState: TransferState) {
