@@ -7,9 +7,9 @@
 
 # Table of Contents
 * [Demo](#demo)
-* [Introduction](#introduction)
 * [Getting Started with Universal](#getting-started)
 * [Universal "Gotchas"](#universal-gotchas)
+* [License](#license)
 
 # Demo
 [angular-universal.ru (Server-Side Rendering)](https://angular-universal.ru)
