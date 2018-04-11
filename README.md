@@ -3,7 +3,7 @@
 </p>
 
 # Angular Universal Starter [![Angular-RU](https://img.shields.io/badge/Telegram_chat:-Angular_RU-216bc1.svg?style=flat)](https://t.me/angular_ru) [![Angular-RU Universal](https://img.shields.io/badge/Telegram_chat:-Angular_RU_Universal-14b102.svg?style=flat)](https://t.me/angular_universal_ru)
-> Server-Side Rendering для Angular
+> Server-Side Rendering for Angular
 
 # Table of Contents
 * [Introduction](#introduction)
@@ -12,8 +12,8 @@
 
 # Getting Started
 
-### Install
-`npm install` или `yarn`
+### Installation
+`npm install` or `yarn`
 
 ### Development (Client-side only rendering)
 Run `npm run start` which will start `ng serve`
