@@ -8,14 +8,14 @@ import { CookieService } from 'ngx-cookie-service';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './shared/core.module';
 
-import { routes } from './app.routing';
+import { ROUTES } from './app.routing';
 import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(ROUTES),
     SharedModule.forRoot(),
     CoreModule.forRoot(),
   ],

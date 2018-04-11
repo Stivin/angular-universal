@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 // Reset
 @import 'reset/normalize';
@@ -6,9 +6,12 @@
 // Core
 @import 'core/variables';
 @import 'core/base';
+// Material
+@import 'material/material';
 // Layout
 @import 'layout/header';
 @import 'layout/toolbar';
 @import 'layout/main';
+@import 'layout/not-found';
 // Widget
 @import 'widget/widget';
