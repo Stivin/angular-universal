@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { MetaLoader, MetaModule, MetaStaticLoader } from '@ngx-meta/core';
+import { MetaLoader, MetaModule as NGXMetaModule, MetaStaticLoader } from '@ngx-meta/core';
 import { TranslateService } from '@ngx-translate/core';
 
 export function metaFactory(translate: TranslateService): MetaLoader {
@@ -27,12 +27,12 @@ export function metaFactory(translate: TranslateService): MetaLoader {
 
 @NgModule({
   imports: [
-    MetaModule.forRoot({
+    NGXMetaModule.forRoot({
       provide: MetaLoader,
       useFactory: metaFactory,
       deps: [TranslateService]
     })
   ]
 })
-export class SharedMetaModule {
+export class MetaModule {
 }
