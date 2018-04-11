@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
-import { SharedTransferHttpService } from '../shared/shared-transfer-http/shared-transfer-http.service';
+import { ApiService } from '../shared/services/api.service';
 
 @Component({
   templateUrl: './back.component.html'
@@ -10,8 +9,7 @@ export class BackComponent implements OnInit {
   public data: any;
   public dataDelay: any;
 
-  constructor(private _http: HttpClient,
-              private _transferHttp: SharedTransferHttpService) {
+  constructor(private _apiService: ApiService) {
   }
 
   ngOnInit(): void {
@@ -24,10 +22,11 @@ export class BackComponent implements OnInit {
       name: 'morpheus',
       job: 'leader'
     };
-    this._transferHttp.post('https://reqres.in/api/users', params).subscribe(res => this.data = res);
+    this._apiService.post('https://reqres.in/api/users', params).subscribe(res => this.data = res);
   }
 
   private _getDelayData(): void {
-    this._http.get('https://reqres.in/api/users?delay=3').subscribe(res => this.dataDelay = res);
+    const params = { delay: 3 };
+    this._apiService.getClient('https://reqres.in/api/users', params).subscribe(res => this.dataDelay = res);
   }
 }

@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 import { MetaGuard } from '@ngx-meta/core';
 
-import { BaseWrapperComponent } from './shared/shared-layout/wrapper/base-wrapper.component';
+import { BaseWrapperComponent } from './shared/layout/wrapper/base-wrapper.component';
 
 const DEFAULT_REDIRECT: string = 'home';
 

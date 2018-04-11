@@ -4,9 +4,9 @@ import { TransferState } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class SharedTransferHttpService {
+export class TransferHttpService {
   constructor(protected transferState: TransferState,
-              private httpClient: HttpClient) {
+              private _http: HttpClient) {
   }
 
   public request(method: string, uri: string | Request, options?: {
@@ -24,7 +24,7 @@ export class SharedTransferHttpService {
   }): Observable<any> {
     // tslint:disable-next-line:no-shadowed-variable
     return this.getData(method, uri, options, (method: string, url: string, options: any) => {
-      return this.httpClient.request(method, url, options);
+      return this._http.request(method, url, options);
     });
   }
 
@@ -42,7 +42,7 @@ export class SharedTransferHttpService {
   }): Observable<any> {
     // tslint:disable-next-line:no-shadowed-variable
     return this.getData('get', url, options, (method: string, url: string, options: any) => {
-      return this.httpClient.get(url, options);
+      return this._http.get(url, options);
     });
   }
 
@@ -63,7 +63,7 @@ export class SharedTransferHttpService {
   }): Observable<any> {
     // tslint:disable-next-line:no-shadowed-variable
     return this.getPostData('post', url, body, options, (url: string, body: any, options: any): Observable<any> => {
-      return this.httpClient.post(url, body, options);
+      return this._http.post(url, body, options);
     });
   }
 
@@ -84,7 +84,7 @@ export class SharedTransferHttpService {
   }): Observable<any> {
     // tslint:disable-next-line:no-shadowed-variable
     return this.getData('put', url, options, (method: string, url: string, options: any) => {
-      return this.httpClient.put(url, options);
+      return this._http.put(url, options);
     });
   }
 
@@ -106,7 +106,7 @@ export class SharedTransferHttpService {
   }): Observable<any> {
     // tslint:disable-next-line:no-shadowed-variable
     return this.getData('delete', url, options, (method: string, url: string, options: any) => {
-      return this.httpClient.delete(url, options);
+      return this._http.delete(url, options);
     });
   }
 
@@ -127,7 +127,7 @@ export class SharedTransferHttpService {
   }): Observable<any> {
     // tslint:disable-next-line:no-shadowed-variable
     return this.getPostData('patch', url, body, options, (url: string, body: any, options: any): Observable<any> => {
-      return this.httpClient.patch(url, body, options);
+      return this._http.patch(url, body, options);
     });
   }
 
@@ -148,7 +148,7 @@ export class SharedTransferHttpService {
   }): Observable<any> {
     // tslint:disable-next-line:no-shadowed-variable
     return this.getData('head', url, options, (method: string, url: string, options: any) => {
-      return this.httpClient.head(url, options);
+      return this._http.head(url, options);
     });
   }
 
@@ -169,7 +169,7 @@ export class SharedTransferHttpService {
   }): Observable<any> {
     // tslint:disable-next-line:no-shadowed-variable
     return this.getData('options', url, options, (method: string, url: string, options: any) => {
-      return this.httpClient.options(url, options);
+      return this._http.options(url, options);
     });
   }
 

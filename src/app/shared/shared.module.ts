@@ -2,14 +2,12 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { SharedLayoutModule } from './shared-layout/shared-layout.module';
-import { SharedTransferHttpModule } from './shared-transfer-http/shared-transfer-http.module';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   exports: [
     TranslateModule,
-    SharedLayoutModule,
-    SharedTransferHttpModule,
+    LayoutModule,
   ]
 })
 export class SharedModule {

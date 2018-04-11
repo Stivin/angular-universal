@@ -26,5 +26,5 @@ import { BaseWrapperComponent } from './wrapper/base-wrapper.component';
     WidgetComponent, WidgetContentComponent, WidgetToolbarComponent,
   ]
 })
-export class SharedLayoutModule {
+export class LayoutModule {
 }

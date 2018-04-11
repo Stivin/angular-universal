@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
+import { ApiService } from '../shared/services/api.service';
 
 @Component({
   templateUrl: './home.component.html'
@@ -7,10 +8,10 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
   public result: any;
 
-  constructor(private _http: HttpClient) {
+  constructor(private _apiService: ApiService) {
   }
 
   ngOnInit(): void {
-    this._http.get('https://api-adresse.data.gouv.fr/search/?q=seclin').subscribe(res => this.result = res);
+    this._apiService.get('https://api-adresse.data.gouv.fr/search/?q=seclin').subscribe(res => this.result = res);
   }
 }
