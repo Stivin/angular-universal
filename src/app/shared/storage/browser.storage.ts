@@ -8,26 +8,26 @@ export class BrowserStorage implements Storage {
   [key: string]: any;
   length: number;
 
-  constructor(private cookieService: CookieService) {
+  constructor(private _cookieService: CookieService) {
   }
 
   public clear(): void {
-    this.cookieService.deleteAll();
+    this._cookieService.deleteAll();
   }
 
   public getItem(key: string): string {
-    return this.cookieService.get(key);
+    return this._cookieService.get(key);
   }
 
   public key(index: number): string {
-    return this.cookieService.getAll().propertyIsEnumerable[index];
+    return this._cookieService.getAll().propertyIsEnumerable[index];
   }
 
   public removeItem(key: string): void {
-    this.cookieService.delete(key);
+    this._cookieService.delete(key);
   }
 
   public setItem(key: string, data: string): void {
-    this.cookieService.set(key, data);
+    this._cookieService.set(key, data);
   }
 }

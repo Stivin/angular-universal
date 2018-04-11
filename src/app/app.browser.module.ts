@@ -5,8 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { REQUEST } from '@nguniversal/express-engine/tokens';
 
-import { AppStorage } from './shared/shared-storage/storage.inject';
-import { BrowserStorage } from './shared/shared-storage/browser.storage';
+import { APP_STORAGE } from './shared/storage/storage.inject';
+import { BrowserStorage } from './shared/storage/browser.storage';
 import { SharedTranslateBrowserModule } from './shared/shared-translate/shared-translate-browser.module';
 
 import { AppModule } from './app.module';
@@ -26,7 +26,7 @@ export function getRequest(): any {
   ],
   providers: [
     { provide: REQUEST, useFactory: (getRequest) },
-    { provide: AppStorage, useClass: BrowserStorage },
+    { provide: APP_STORAGE, useClass: BrowserStorage },
   ],
   bootstrap: [AppComponent],
 })

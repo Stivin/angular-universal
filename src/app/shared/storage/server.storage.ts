@@ -9,12 +9,12 @@ export class ServerStorage implements Storage {
   length: number;
   cookies: any;
 
-  constructor(@Inject(REQUEST) private request: any) {
-    if (request === null) {
+  constructor(@Inject(REQUEST) private _request: any) {
+    if (_request === null) {
       this.cookies = [];
       return;
     }
-    this.cookies = request.cookies;
+    this.cookies = _request.cookies;
   }
 
   public clear(): void {
