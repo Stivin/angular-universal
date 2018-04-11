@@ -26,5 +26,19 @@
   "NOT_FOUND": {
     "TITLE": "Not Found",
     "DESC": "This page does not exist"
+  },
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "",
+      "DESC": ""
+    },
+    "REG": {
+      "TITLE": "",
+      "DESC": ""
+    },
+    "RESTORE": {
+      "TITLE": "",
+      "DESC": ""
+    }
   }
 }

@@ -26,5 +26,19 @@
   "NOT_FOUND": {
     "TITLE": "Страница не найдена",
     "DESC": "Такой страницы не существует"
+  },
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "",
+      "DESC": ""
+    },
+    "REG": {
+      "TITLE": "",
+      "DESC": ""
+    },
+    "RESTORE": {
+      "TITLE": "",
+      "DESC": ""
+    }
   }
 }
