@@ -7,7 +7,7 @@
 
 # Table of Contents
 * [Demo](#demo)
-* [Getting Started with Universal](#getting-started)
+* [Getting Started](#getting-started)
 * [Universal "Gotchas"](#universal-gotchas)
 * [License](#license)
 
