@@ -1,5 +1,5 @@
 <header>
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
+    <h1 *ngIf="title">{{ title }}</h1>
+    <p *ngIf="description">{{ description }}</p>
     <ng-content></ng-content>
 </header>

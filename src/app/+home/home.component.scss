@@ -1,0 +1,24 @@
+.home-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .home-image img {
+    width: 480px;
+  }
+  .home-desc {
+    margin-left: 20px;
+    h1 {
+      font-size: 35px;
+    }
+    a {
+      color: #258102;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+}

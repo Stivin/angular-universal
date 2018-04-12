@@ -15,7 +15,8 @@
   },
   "HOME": {
     "TITLE": "Home page",
-    "DESC": "Description for the home page"
+    "DESC": "Description for the home page",
+    "BUTTON_GET_STARTED": "Get Started"
   },
   "BACK": {
     "TITLE": "Request for backend",

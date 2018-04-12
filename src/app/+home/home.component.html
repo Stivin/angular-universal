@@ -1,4 +1,17 @@
-<app-header [title]="'HOME.TITLE' | translate" [description]="'HOME.DESC' | translate"></app-header>
+<app-header>
+    <section class="home-header-wrapper">
+        <div class="home-image">
+            <img src="assets/img/universal-logo.svg" alt="Angular Universal">
+        </div>
+        <div class="home-desc">
+            <h1 class="">Angular Universal</h1>
+            <h4 class="tagline">Server-side Rendering</h4>
+            <a mat-raised-button [routerLink]="['/quickstart']">
+                {{ 'HOME.BUTTON_GET_STARTED' | translate }}
+            </a>
+        </div>
+    </section>
+</app-header>
 
 <app-widget>
     <ul>
@@ -11,3 +24,8 @@
     </ul>
 </app-widget>
 
+<div class="home-wrapper">
+    <button mat-raised-button color="primary">
+        {{ 'HOME.BUTTON_GET_STARTED' | translate }}
+    </button>
+</div>

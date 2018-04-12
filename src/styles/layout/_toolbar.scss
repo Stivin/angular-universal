@@ -39,6 +39,7 @@ app-toolbar {
     padding: 10px;
     .toolbar-logo__link {
       color: inherit;
+      line-height: 13px;
       text-decoration: none;
       .toolbar-logo__first {
         font-size: 16px;
@@ -89,7 +90,7 @@ app-toolbar {
         padding-left: 17px;
         transition: all .3s ease;
         &:hover {
-          background-color: #2c6ab7;
+          background-color: rgba(0, 0, 0, 0.1);
         }
       }
       .toolbar-lang-setting__menu {
@@ -112,7 +113,7 @@ app-toolbar {
         .toolbar-lang-setting__menu_header {
           color: $color-primary;
           border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-          font-weight: 500;
+          font-weight: bold;
           padding: 5px 5px 10px 15px;
           margin-bottom: 5px;
         }
@@ -123,18 +124,15 @@ app-toolbar {
           li > a {
             cursor: pointer;
             display: block;
-            color: #262626;
+            color: #222;
             line-height: 1.5;
             white-space: nowrap;
             text-decoration: none;
             padding: 8px 15px;
-            &.toolbar-lang-active {
-              background-color: rgba(0, 0, 0, .1);
+            &.toolbar-lang-active, &:hover {
+              background-color: rgba(0, 0, 0, 0.1);
               color: $color-primary;
-            }
-            &:hover {
               text-decoration: none;
-              background-color: #ececec;
             }
           }
         }
@@ -156,7 +154,7 @@ app-toolbar {
         padding-left: 17px;
         transition: all .3s ease;
         &:hover {
-          background-color: #2c6ab7;
+          background-color: rgba(0, 0, 0, 0.1);
         }
       }
     }
