@@ -1,0 +1,7 @@
+<app-header [title]="'BLOG.TITLE' | translate" [description]="'BLOG.DESC' | translate"></app-header>
+
+<div>
+    <app-widget *ngFor="let item of blogList$ | async" [title]="item.title">
+        {{ item.text }}
+    </app-widget>
+</div>

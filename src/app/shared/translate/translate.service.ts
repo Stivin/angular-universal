@@ -1,4 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { TranslateService as NGXTranslateService } from '@ngx-translate/core';
 import { MetaService } from '@ngx-meta/core';
@@ -16,6 +17,7 @@ const LANG_DEFAULT: ILang = { 'code': 'ru', 'name': 'Русский', 'culture':
 @Injectable()
 export class TranslateService {
   constructor(@Inject(APP_STORAGE) private _appStorage: Storage,
+              private _router: Router,
               private readonly _translate: NGXTranslateService,
               private readonly _meta: MetaService) {
   }
@@ -39,11 +41,18 @@ export class TranslateService {
   }
 
   public changeLang(lang: ILang): void {
+    if (lang.code === this._translate.currentLang) {
+      return;
+    }
     this._appStorage.setItem('langCode', lang.code);
-    this._setLanguage(lang);
+    window.location.pathname = this._router.url;
   }
 
   public getLangList(): Observable<ILang[]> {
     return Observable.of(LANG_LIST);
+  }
+
+  public getCurrentLang(): string {
+    return this._translate.currentLang;
   }
 }

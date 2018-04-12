@@ -4,13 +4,7 @@ import { AboutComponent } from './about.component';
 
 export const ROUTES: Routes = [
   {
-    path: '',
-    component: AboutComponent,
-    data: {
-      meta: {
-        title: 'ABOUT.TITLE',
-        description: 'ABOUT.DESC'
-      }
-    }
+    path: '', component: AboutComponent,
+    data: { meta: { title: 'ABOUT.TITLE', description: 'ABOUT.DESC' } }
   }
 ];

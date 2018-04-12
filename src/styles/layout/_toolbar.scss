@@ -5,7 +5,7 @@ app-toolbar {
   left: 0;
   width: 100%;
   height: $toolbar-height;
-  background-color: $toolbar-color-bg;
+  background-color: $color-primary;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   z-index: 100;
   .toolbar__block_left {
@@ -127,12 +127,36 @@ app-toolbar {
             line-height: 1.5;
             white-space: nowrap;
             text-decoration: none;
-            padding: 4px 15px 10px 15px;
+            padding: 8px 15px;
+            &.toolbar-lang-active {
+              background-color: rgba(0, 0, 0, .1);
+              color: $color-primary;
+            }
             &:hover {
               text-decoration: none;
               background-color: #ececec;
             }
           }
+        }
+      }
+    }
+  }
+  app-toolbar-profile {
+    display: block;
+    height: inherit;
+    .toolbar-profile {
+      width: 83px;
+      height: inherit;
+      .toolbar-profile__button {
+        cursor: pointer;
+        height: inherit;
+        color: #fff;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        padding-top: 17px;
+        padding-left: 17px;
+        transition: all .3s ease;
+        &:hover {
+          background-color: #2c6ab7;
         }
       }
     }

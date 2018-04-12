@@ -13,6 +13,7 @@ export const ROUTES: Routes = [
       { path: 'auth', loadChildren: './+auth/auth.module#AuthModule' },
       { path: 'home', loadChildren: './+home/home.module#HomeModule' },
       { path: 'back', loadChildren: './+back/back.module#BackModule' },
+      { path: 'blog', loadChildren: './+blog/blog.module#BlogModule' },
       { path: 'about', loadChildren: './+about/about.module#AboutModule' },
       {
         path: '**', component: WrapperNotFoundComponent,

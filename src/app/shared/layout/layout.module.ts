@@ -4,8 +4,16 @@ import { RouterModule } from '@angular/router';
 
 import { TranslateModule } from '@ngx-translate/core';
 
+import { MaterialModule } from '../material';
+
 import { HeaderComponent } from './header/header.component';
-import { ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent } from './toolbar';
+import {
+  ToolbarComponent,
+  ToolbarLangComponent,
+  ToolbarLogoComponent,
+  ToolbarMenuComponent,
+  ToolbarProfileComponent
+} from './toolbar';
 import { WidgetComponent, WidgetContentComponent, WidgetToolbarComponent } from './widget';
 import { WrapperCommonComponent, WrapperNotFoundComponent } from './wrapper';
 
@@ -14,10 +22,11 @@ import { WrapperCommonComponent, WrapperNotFoundComponent } from './wrapper';
     CommonModule,
     RouterModule,
     TranslateModule.forChild(),
+    MaterialModule,
   ],
   declarations: [
     HeaderComponent,
-    ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent,
+    ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent, ToolbarProfileComponent,
     WidgetComponent, WidgetContentComponent, WidgetToolbarComponent,
     WrapperCommonComponent, WrapperNotFoundComponent,
   ],
