@@ -1,9 +1,9 @@
 header {
   background-color: $color-primary;
-  color: #fff;
   padding: $padding + 45;
   margin: 0 - $margin - 20 0 - $margin $margin 0 - $margin;
-  h1, h2 {
+  h1, h2, h4, p {
+    color: #fff;
     margin: 0;
   }
 }
