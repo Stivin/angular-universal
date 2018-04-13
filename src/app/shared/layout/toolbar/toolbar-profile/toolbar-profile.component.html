@@ -1,6 +1,30 @@
-<div class="toolbar-profile">
-    <div class="toolbar-profile__button">
+<div class="toolbar-profile" #profileMenu>
+    <div class="toolbar-profile__button" (click)="onToggleProfileMenu()">
         <mat-icon>person</mat-icon>
         <mat-icon>arrow_drop_down</mat-icon>
+    </div>
+    <div class="toolbar-profile__menu" [class.toolbar-profile__menu_show]="isShowMenu">
+        <mat-nav-list>
+            <mat-list-item>
+                <a matLine [routerLink]="['/profile']">Мой профиль</a>
+                <button mat-icon-button>
+                    <mat-icon>info</mat-icon>
+                </button>
+            </mat-list-item>
+            <mat-list-item (click)="toggleDarkTheme(darkThemeControl.value)">
+                <a matLine>Ночной режим</a>
+                <button mat-icon-button>
+                    <mat-slide-toggle [formControl]="darkThemeControl"
+                                      (change)="toggleDarkTheme(darkThemeControl.value)"></mat-slide-toggle>
+                </button>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <a matLine [routerLink]="['/logout']">Выйти</a>
+                <button mat-icon-button>
+                    <mat-icon>exit_to_app</mat-icon>
+                </button>
+            </mat-list-item>
+        </mat-nav-list>
     </div>
 </div>

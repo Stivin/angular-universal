@@ -16,11 +16,13 @@ import {
 } from './toolbar';
 import { WidgetComponent, WidgetContentComponent, WidgetToolbarComponent } from './widget';
 import { WrapperCommonComponent, WrapperNotFoundComponent } from './wrapper';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
+    ReactiveFormsModule,
     TranslateModule.forChild(),
     MaterialModule,
   ],

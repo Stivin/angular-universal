@@ -157,6 +157,50 @@ app-toolbar {
           background-color: rgba(0, 0, 0, 0.1);
         }
       }
+      .toolbar-profile__menu {
+        display: none;
+        position: absolute;
+        right: 10px;
+        min-width: 250px;
+        background-color: #fff;
+        border-radius: 1px;
+        font-size: 16px;
+        text-align: left;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        background-clip: padding-box;
+        padding: 5px 0;
+        margin: 0;
+        z-index: 1000;
+        &.toolbar-profile__menu_show {
+          display: block;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li > a {
+            cursor: pointer;
+            display: block;
+            color: #222;
+            line-height: 1.5;
+            white-space: nowrap;
+            text-decoration: none;
+            padding: 8px 15px;
+            &.toolbar-lang-active, &:hover {
+              background-color: rgba(0, 0, 0, 0.1);
+              color: $color-primary;
+              text-decoration: none;
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+.dark-theme {
+  app-toolbar {
+    background-color: #242424;
+    color: #fff;
   }
 }

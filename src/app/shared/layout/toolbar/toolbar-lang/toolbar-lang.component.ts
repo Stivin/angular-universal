@@ -31,7 +31,7 @@ export class ToolbarLangComponent implements OnInit {
   }
 
   @HostListener('document:click', ['$event'])
-  public handleClick(event) {
+  public handleClick(event): void {
     if (!this.langMenu.nativeElement.contains(event.target)) {
       this.isShowMenu = false;
     }
