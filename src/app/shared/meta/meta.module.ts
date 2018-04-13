@@ -16,6 +16,7 @@ export function metaFactory(translate: TranslateService): MetaLoader {
       generator: 'ng-universal',
       'og:site_name': 'APP_NAME',
       'og:type': 'website',
+      'og:image': 'https://angular-universal.ru/assets/img/universal-logo.svg',
       'og:locale': 'en-US',
       'og:locale:alternate': [
         { 'code': 'en', 'name': 'English', 'culture': 'en-US' },
