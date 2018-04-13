@@ -14,7 +14,6 @@ import {
   ToolbarMenuComponent,
   ToolbarProfileComponent
 } from './toolbar';
-import { WidgetComponent, WidgetContentComponent, WidgetToolbarComponent } from './widget';
 import { WrapperCommonComponent, WrapperNotFoundComponent } from './wrapper';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -29,12 +28,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     HeaderComponent,
     ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent, ToolbarProfileComponent,
-    WidgetComponent, WidgetContentComponent, WidgetToolbarComponent,
     WrapperCommonComponent, WrapperNotFoundComponent,
   ],
   exports: [
     HeaderComponent,
-    WidgetComponent, WidgetContentComponent, WidgetToolbarComponent,
   ]
 })
 export class LayoutModule {

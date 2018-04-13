@@ -13,7 +13,7 @@
     </section>
 </app-header>
 
-<app-widget>
+<mat-card>
     <ul>
         <li *ngFor="let feature of result?.features">
             {{ feature.properties.city }} -
@@ -22,7 +22,7 @@
             {{ feature.properties.type }}
         </li>
     </ul>
-</app-widget>
+</mat-card>
 
 <div class="home-wrapper">
     <button mat-raised-button color="primary">

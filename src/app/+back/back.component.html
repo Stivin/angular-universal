@@ -1,9 +1,15 @@
 <app-header [title]="'BACK.TITLE' | translate" [description]="'BACK.DESC' | translate"></app-header>
 
-<app-widget [title]="'BACK.POST_REQUEST' | translate">
-    <pre>{{ data | json }}</pre>
-</app-widget>
+<mat-card>
+    <mat-card-title>{{ 'BACK.POST_REQUEST' | translate }}</mat-card-title>
+    <mat-card-content>
+        <pre>{{ data | json }}</pre>
+    </mat-card-content>
+</mat-card>
 
-<app-widget [title]="'BACK.GET_REQUEST' | translate">
-    <pre>{{ dataDelay | json }}</pre>
-</app-widget>
+<mat-card>
+    <mat-card-title>{{ 'BACK.GET_REQUEST' | translate }}</mat-card-title>
+    <mat-card-content>
+        <pre>{{ dataDelay | json }}</pre>
+    </mat-card-content>
+</mat-card>
