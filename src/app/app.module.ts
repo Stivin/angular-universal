@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
     HttpClientModule,
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forRoot(ROUTES, { initialNavigation: 'enabled' }),
     SharedModule.forRoot(),
     CoreModule.forRoot(),
   ],

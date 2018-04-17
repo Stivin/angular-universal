@@ -35,7 +35,6 @@
     "@ngx-meta/core": "5.0.0",
     "@ngx-translate/core": "9.1.1",
     "@ngx-translate/http-loader": "3.0.1",
-    "angular2-notifications": "^0.9.8",
     "cookie-parser": "1.4.3",
     "core-js": "2.5.4",
     "hammerjs": "2.0.8",
