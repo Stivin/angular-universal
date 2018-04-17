@@ -202,5 +202,8 @@ app-toolbar {
   app-toolbar {
     background-color: #242424;
     color: #fff;
+    .toolbar-profile__menu {
+      background-color: #242424 !important;
+    }
   }
 }
