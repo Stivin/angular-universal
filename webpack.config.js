@@ -8,7 +8,7 @@ module.exports = {
   },
   target: 'node',
   resolve: { extensions: ['.ts', '.js'] },
-  externals: [/(node_modules|main\..*\.js)/],
+  externals: [/node_modules/],
   output: {
     path: PATH.join(__dirname, 'dist'),
     filename: '[name].js'

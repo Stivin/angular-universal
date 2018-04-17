@@ -42,9 +42,9 @@ export class ToolbarProfileComponent implements OnInit {
   public changeDarkTheme(isDarkTheme: boolean): void {
     this._appStorage.setItem(APP_STORAGE_IS_DARK_THEME, String(isDarkTheme));
     if (isDarkTheme) {
-      this._renderer.addClass(document.body, DARK_THEME);
+      // this._renderer.addClass(document.body, DARK_THEME);
     } else {
-      this._renderer.removeClass(document.body, DARK_THEME);
+      // this._renderer.removeClass(document.body, DARK_THEME);
     }
   }
 
