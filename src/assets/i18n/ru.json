@@ -5,6 +5,7 @@
     "DESC": "Проект с открытым исходным кодом для Angular Universal"
   },
   "FOOTER": {
+    "AND": "и",
     "VERSION": "Текущая версия: {{value}}"
   },
   "MENU": {

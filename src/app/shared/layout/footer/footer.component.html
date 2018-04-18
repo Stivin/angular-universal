@@ -3,7 +3,9 @@
         <div class="footer__logo">
             <img [src]="angularImg" alt="Angular">
             <span>
-                <a [href]="linkAngular">Angular</a> и <a [href]="linkAngularUniversal">Angular Universal</a>
+                <a [href]="linkAngular">Angular</a>
+                {{ 'FOOTER.AND' | translate }}
+                <a [href]="linkAngularUniversal">Angular Universal</a>
             </span>
         </div>
         <div class="footer__version" [translate]="'FOOTER.VERSION'" [translateParams]="{ value: version }"></div>

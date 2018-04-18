@@ -5,6 +5,7 @@
     "DESC": "An open source project for Angular Universal"
   },
   "FOOTER": {
+    "AND": "and",
     "VERSION": "Current Version: {{value}}"
   },
   "MENU": {
