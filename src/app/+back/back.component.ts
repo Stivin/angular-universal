@@ -27,6 +27,6 @@ export class BackComponent implements OnInit {
 
   private _getDelayData(): void {
     const params = { delay: 3 };
-    this._apiService.getClient('https://reqres.in/api/users', params).subscribe(res => this.dataDelay = res);
+    this._apiService.get('https://reqres.in/api/users', params).subscribe(res => this.dataDelay = res);
   }
 }

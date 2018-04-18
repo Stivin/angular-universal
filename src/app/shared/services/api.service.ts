@@ -22,20 +22,11 @@ export class ApiService {
     return this._transferHttp.get(url, { params: httpParams });
   }
 
-  public getClient(url: string, params: IParams = null): Observable<any> {
-    const httpParams: HttpParams = this._buildHttpParams(params);
-    return this._httpClient.get(url, { params: httpParams });
-  }
-
   /*
   * POST
   * */
   public post(url: string, params: IParams): Observable<any> {
     return this._transferHttp.post(url, params);
-  }
-
-  public postClient(url: string, params: IParams): Observable<any> {
-    return this._httpClient.post(url, params);
   }
 
   /*
