@@ -2,7 +2,9 @@
     <div class="footer__wrapper">
         <div class="footer__logo">
             <img [src]="angularImg" alt="Angular">
-            <a [href]="angularLink">Learn Angular</a>
+            <span>
+                <a [href]="linkAngular">Angular</a> и <a [href]="linkAngularUniversal">Angular Universal</a>
+            </span>
         </div>
         <div class="footer__version" [translate]="'FOOTER.VERSION'" [translateParams]="{ value: version }"></div>
         <div class="footer__copyright">Angular RU Universal © {{ year }}</div>
