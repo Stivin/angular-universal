@@ -11,8 +11,7 @@
   "MENU": {
     "HOME": "Home",
     "BACK": "Request for backend",
-    "BLOG": "Blog",
-    "ABOUT": "About"
+    "BLOG": "Blog"
   },
   "LANG": {
     "LANG_WEB_SITE": "Web site language"
@@ -31,10 +30,6 @@
   "BLOG": {
     "TITLE": "Blog",
     "DESC": "Description for the blog page"
-  },
-  "ABOUT": {
-    "TITLE": "About",
-    "DESC": "Description for the about page"
   },
   "NOT_FOUND": {
     "TITLE": "Not Found",

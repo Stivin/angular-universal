@@ -4,7 +4,6 @@ const LINK_LIST: any[] = [
   { url: '/home', name: 'MENU.HOME' },
   { url: '/back', name: 'MENU.BACK' },
   { url: '/blog', name: 'MENU.BLOG' },
-  { url: '/about', name: 'MENU.ABOUT' }
 ];
 
 @Component({
