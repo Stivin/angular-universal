@@ -4,6 +4,9 @@
     "TITLE": "Демонстрация Angular Universal приложения",
     "DESC": "Проект с открытым исходным кодом для Angular Universal"
   },
+  "FOOTER": {
+    "VERSION": "Текущая версия: {{value}}"
+  },
   "MENU": {
     "HOME": "Главная",
     "BACK": "Запрос на backend",

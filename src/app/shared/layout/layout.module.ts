@@ -6,6 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { MaterialModule } from '../material';
 
+import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import {
   ToolbarComponent,
@@ -26,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
   ],
   declarations: [
+    FooterComponent,
     HeaderComponent,
     ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent, ToolbarProfileComponent,
     WrapperCommonComponent, WrapperNotFoundComponent,

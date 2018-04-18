@@ -4,6 +4,9 @@
     "TITLE": "Angular Universal Application Demo",
     "DESC": "An open source project for Angular Universal"
   },
+  "FOOTER": {
+    "VERSION": "Current Version: {{value}}"
+  },
   "MENU": {
     "HOME": "Home",
     "BACK": "Request for backend",
