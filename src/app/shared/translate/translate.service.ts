@@ -22,6 +22,13 @@ export class TranslateService {
               private readonly _meta: MetaService) {
   }
 
+  public init(): Promise<boolean> {
+    return new Promise(resolve => {
+      this._translate.use('ru');
+      resolve(true);
+    });
+  }
+
   public initLanguage(): void {
     const defaultLanguage = LANG_DEFAULT;
     this._translate.addLangs(LANG_LIST.map((lang: ILang) => lang.code));

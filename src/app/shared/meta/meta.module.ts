@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 
 import { MetaLoader, MetaModule as NGXMetaModule, MetaStaticLoader } from '@ngx-meta/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs/Observable';
+
+import { ILang } from '../translate';
 
 export function metaFactory(translate: TranslateService): MetaLoader {
   return new MetaStaticLoader({
-    callback: (key: string) => translate.get(key),
+    callback: (key: string): Observable<string | Object> => translate.get(key),
     pageTitlePositioning: 10,
     pageTitleSeparator: ' | ',
     applicationName: 'APP_NAME',
@@ -21,7 +24,7 @@ export function metaFactory(translate: TranslateService): MetaLoader {
       'og:locale:alternate': [
         { 'code': 'en', 'name': 'English', 'culture': 'en-US' },
         { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU' }
-      ].map((language: any) => language.culture).toString()
+      ].map((language: ILang) => language.culture).toString()
     }
   });
 }

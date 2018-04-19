@@ -7,10 +7,10 @@ export class GlobalService {
   constructor(@Inject(TranslateService) private _translateService: TranslateService) {
   }
 
-  init() {
-    return new Promise((resolve, reject) => {
+  public init(): Promise<boolean> {
+    return new Promise(resolve => {
       this._translateService.use('ru');
-      resolve();
+      resolve(true);
     });
   }
 }
