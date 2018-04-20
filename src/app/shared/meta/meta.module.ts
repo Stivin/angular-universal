@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 
 import { MetaLoader, MetaModule as NGXMetaModule, MetaStaticLoader } from '@ngx-meta/core';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService as NGXTranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs/Observable';
 
 import { ILang } from '../translate';
 
-export function metaFactory(translate: TranslateService): MetaLoader {
+export function metaFactory(translate: NGXTranslateService): MetaLoader {
   return new MetaStaticLoader({
     callback: (key: string): Observable<string | Object> => translate.get(key),
     pageTitlePositioning: 10,
@@ -34,7 +34,7 @@ export function metaFactory(translate: TranslateService): MetaLoader {
     NGXMetaModule.forRoot({
       provide: MetaLoader,
       useFactory: metaFactory,
-      deps: [TranslateService]
+      deps: [NGXTranslateService]
     })
   ]
 })
