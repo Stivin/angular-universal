@@ -1,4 +1,5 @@
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { TranslateService as NGXTranslateService } from '@ngx-translate/core';
@@ -8,7 +9,6 @@ import { Observable } from 'rxjs/Observable';
 import { APP_STORAGE } from '../storage/storage.inject';
 
 import { ILang } from './translate.interface';
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 const LANG_LIST: ILang[] = [
   { 'code': 'en', 'name': 'English', 'culture': 'en-US' },
