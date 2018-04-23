@@ -17,10 +17,17 @@
 [angular-universal.ru (Server-Side Rendering)](https://angular-universal.ru)
 
 # Features
-- [x] [Angular] 5
-- [x] Using the modern **UI components** of [Angular Material]
-- [x] Uses [ngx-translate] to support internationalization (i18n)
-- [x] Uses [ngx-meta] for SEO (*title, meta tags, and Open Graph tags for social sharing*)
+- [x] **[Angular] 5** as universal web application platform
+- [x] Using the modern **UI components** of **[Angular Material]**
+- [x] Uses **[module-map-ngfactory-loader] 5** as server side rendering of lazy routes
+- [x] Execution of queries to api on the server **TransferHttp**
+- [x] Work with cookies on the server **UniversalStorage**
+- [x] Uses **[angular/cli] 1.7** as code scaffolder
+- [x] Uses **[webpack] 3** as module bundler
+- [x] Uses **[node]** as server
+- [x] Uses **[express]** as request handler
+- [x] Uses **[ngx-translate]** to support internationalization (i18n)
+- [x] Uses **[ngx-meta]** for SEO (*title, meta tags, and Open Graph tags for social sharing*)
 
 # Plans
 - [ ] @angular/service-worker
@@ -82,5 +89,10 @@ constructor(element: ElementRef, renderer: Renderer2) {
 
 [Angular]: https://angular.io
 [Angular Material]: https://material.angular.io
+[module-map-ngfactory-loader]: https://github.com/angular/universal/tree/v5.0.0
+[angular/cli]: https://github.com/angular/angular-cli/tree/1.7.x
+[webpack]: https://github.com/webpack/webpack/tree/v3.11.0
+[node]: https://nodejs.org/dist/latest-v8.x/docs/api/
+[express]: http://expressjs.com/en/4x/api.html
 [ngx-translate]: https://github.com/ngx-translate/core
 [ngx-meta]: https://github.com/fulls1z3/ngx-meta
