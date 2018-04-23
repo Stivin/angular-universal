@@ -45,9 +45,12 @@ export class TranslateService {
       language = this._getFindLang(this._translate.getBrowserLang());
     }
     if (isPlatformServer(this._platformId)) {
-      const reqAcceptLangList: string[] = this._request.headers['accept-language'].split(';');
-      const reqLangList: string[] = reqAcceptLangList[0].split(',');
-      language = LANG_LIST.find((lang: ILang) => reqLangList.indexOf(lang.code) !== -1 || reqLangList.indexOf(lang.culture) !== -1);
+      try {
+        const reqLangList: string[] = this._request.headers['accept-language'].split(';')[0].split(',');
+        language = LANG_LIST.find((lang: ILang) => reqLangList.indexOf(lang.code) !== -1 || reqLangList.indexOf(lang.culture) !== -1);
+      } catch (err) {
+        language = LANG_DEFAULT;
+      }
     }
     language = language || LANG_DEFAULT;
     this._appStorage.setItem(STORAGE_LANG_NAME, language.code);
