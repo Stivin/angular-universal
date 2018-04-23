@@ -14,7 +14,7 @@
 * [License](#license)
 
 # Demo
-[angular-universal.ru (Server-Side Rendering)](https://angular-universal.ru)
+Live Demo: [angular-universal.ru](https://angular-universal.ru) (*Server-Side Rendering*)
 
 # Features
 - [x] **[Angular] 5** as universal web application platform
