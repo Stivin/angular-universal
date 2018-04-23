@@ -7,12 +7,23 @@
 
 # Table of Contents
 * [Demo](#demo)
+* [Features](#features)
+* [Plans](#plans)
 * [Getting Started](#getting-started)
 * [Universal "Gotchas"](#universal-gotchas)
 * [License](#license)
 
 # Demo
 [angular-universal.ru (Server-Side Rendering)](https://angular-universal.ru)
+
+# Features
+- [x] [Angular] 5
+- [x] Using the modern **UI components** of [Angular Material]
+- [x] Uses [ngx-translate] to support internationalization (i18n)
+- [x] Uses [ngx-meta] for SEO (*title, meta tags, and Open Graph tags for social sharing*)
+
+# Plans
+- [ ] @angular/service-worker
 
 # Getting Started
 
@@ -68,3 +79,8 @@ constructor(element: ElementRef, renderer: Renderer2) {
 
 # License
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)
+
+[Angular]: https://angular.io
+[Angular Material]: https://material.angular.io
+[ngx-translate]: https://github.com/ngx-translate/core
+[ngx-meta]: https://github.com/fulls1z3/ngx-meta
