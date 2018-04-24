@@ -1,10 +1,10 @@
 import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
 
-import { MetaModule } from './meta/meta.module';
+import { MetaModule } from './meta';
+import { TranslateService } from './translate';
 import { ApiService } from './services/api.service';
 import { TransferHttpService } from './services/transfer-http.service';
 import { StatusService } from './services/status.service';
-import { TranslateService } from './translate';
 
 export function initLanguage(translateService: TranslateService): Function {
   return (): Promise<any> => translateService.initLanguage();

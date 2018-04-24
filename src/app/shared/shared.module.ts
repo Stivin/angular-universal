@@ -2,8 +2,8 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { LayoutModule } from './layout/layout.module';
-import { MaterialModule } from './material/material.module';
+import { LayoutModule } from './layout';
+import { MaterialModule } from './material';
 
 @NgModule({
   exports: [
