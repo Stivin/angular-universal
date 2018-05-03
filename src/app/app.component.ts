@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import 'rxjs/add/operator/do';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet></router-outlet>'
+  template: '<router-outlet></router-outlet>',
+  styleUrls: ['../styles/main.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
 }

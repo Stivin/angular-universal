@@ -6,7 +6,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateServerLoaderService } from './translate-server-loader.service';
 
 export function translateFactory(transferState: TransferState) {
-  return new TranslateServerLoaderService('./dist/server/assets/i18n', '.json', transferState);
+  return new TranslateServerLoaderService('./dist/browser/assets/i18n', '.json', transferState);
 }
 
 @NgModule({

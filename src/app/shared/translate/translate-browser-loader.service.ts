@@ -3,7 +3,7 @@ import { makeStateKey, StateKey, TransferState } from '@angular/platform-browser
 
 import { TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 const PREFIX: string = 'i18n';
 const SUFFIX: string = '.json';

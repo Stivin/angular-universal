@@ -11,9 +11,9 @@ import { join } from 'path';
 
 enableProdMode();
 
-const PORT: number | string = process.env.PORT || 4000;
+const PORT: number | string = process.env.PORT || 3000;
 const DIST_FOLDER: string = join(process.cwd(), 'dist');
-const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main.bundle');
+const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main');
 const app = express();
 app.use(compression());
 app.use(cookieParser());

@@ -4,7 +4,7 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { TranslateService as NGXTranslateService } from '@ngx-translate/core';
 import { MetaService } from '@ngx-meta/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable, of } from 'rxjs';
 
 import { APP_STORAGE } from '../storage/storage.inject';
 
@@ -76,7 +76,7 @@ export class TranslateService {
   }
 
   public getLangList(): Observable<ILang[]> {
-    return Observable.of(LANG_LIST);
+    return of(LANG_LIST);
   }
 
   public getCurrentLang(): string {

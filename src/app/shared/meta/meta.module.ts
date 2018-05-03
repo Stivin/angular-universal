@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { MetaLoader, MetaModule as NGXMetaModule, MetaStaticLoader } from '@ngx-meta/core';
 import { TranslateService as NGXTranslateService } from '@ngx-translate/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { ILang } from '../translate';
 
