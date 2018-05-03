@@ -1,8 +1,6 @@
-<p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/1016365/10639063/138338bc-7806-11e5-8057-d34c75f3cafc.png" alt="Angular Universal" height="320"/>
-</p>
-
-# Angular Universal Starter [![Angular-RU](https://img.shields.io/badge/Telegram_chat:-Angular_RU-216bc1.svg?style=flat)](https://t.me/angular_ru) [![Angular-RU Universal](https://img.shields.io/badge/Telegram_chat:-Angular_RU_Universal-14b102.svg?style=flat)](https://t.me/angular_universal_ru)
+<img src="https://cloud.githubusercontent.com/assets/1016365/10639063/138338bc-7806-11e5-8057-d34c75f3cafc.png" alt="Angular Universal" height="86"/> Angular Universal Starter
+======================================
+[![Angular-RU](https://img.shields.io/badge/Telegram_chat:-Angular_RU-216bc1.svg?style=flat)](https://t.me/angular_ru) [![Angular-RU Universal](https://img.shields.io/badge/Telegram_chat:-Angular_RU_Universal-14b102.svg?style=flat)](https://t.me/angular_universal_ru)
 > Server-Side Rendering for Angular
 
 # Table of Contents
@@ -17,12 +15,10 @@
 Live Demo: [angular-universal.ru](https://angular-universal.ru) (*Server-Side Rendering*)
 
 # Features
-- [x] **[Angular] 6** as universal web application platform
-- [x] Using the modern **UI components** of **[Angular Material]**
-- [x] Uses **[module-map-ngfactory-loader] 6.0.0-rc.2** as server side rendering of lazy routes
-- [x] Execution of queries to api on the server **TransferHttp**
-- [x] Work with cookies on the server **UniversalStorage**
-- [x] Uses **[angular/cli] 6.0.0-rc.5** as code scaffolder
+- [x] Uses **[Angular] 6** as universal web application platform
+- [x] Uses **[Angular Material]** as UI components
+- [x] Uses **[module-map-ngfactory-loader] 6** as server side rendering of lazy routes
+- [x] Uses **[angular/cli] 6** as code scaffolder
 - [x] Uses **[webpack] 4** as module bundler
 - [x] Uses **[node]** as server
 - [x] Uses **[express]** as request handler
