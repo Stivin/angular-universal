@@ -12,7 +12,7 @@
 * [License](#license)
 
 # Live Demo
-[angular-universal.ru](https://angular-universal.ru) *(Server-Side Rendering)*
+**[angular-universal.ru](https://angular-universal.ru)** *(Server-Side Rendering)*
 
 # Features
 - [x] Uses **[Angular] 6** as universal web application platform
