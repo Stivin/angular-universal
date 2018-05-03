@@ -1,22 +1,22 @@
-<img src="https://cloud.githubusercontent.com/assets/1016365/10639063/138338bc-7806-11e5-8057-d34c75f3cafc.png" alt="Angular Universal" height="86"/> Angular Universal Starter
+<img src="https://cloud.githubusercontent.com/assets/1016365/10639063/138338bc-7806-11e5-8057-d34c75f3cafc.png" alt="Angular Universal" height="100"/> Angular Universal Full Starter
 ======================================
-[![Angular-RU](https://img.shields.io/badge/Telegram_chat:-Angular_RU-216bc1.svg?style=flat)](https://t.me/angular_ru) [![Angular-RU Universal](https://img.shields.io/badge/Telegram_chat:-Angular_RU_Universal-14b102.svg?style=flat)](https://t.me/angular_universal_ru)
+[![Angular-RU Universal](https://img.shields.io/badge/Telegram_chat:-Angular_RU_Universal-14b102.svg?style=flat)](https://t.me/angular_universal_ru)
 > Server-Side Rendering for Angular
 
 # Table of Contents
-* [Demo](#demo)
+* [Live Demo](#live-demo)
 * [Features](#features)
 * [Plans](#plans)
 * [Getting Started](#getting-started)
 * [Universal "Gotchas"](#universal-gotchas)
 * [License](#license)
 
-# Demo
-Live Demo: [angular-universal.ru](https://angular-universal.ru) (*Server-Side Rendering*)
+# Live Demo
+[angular-universal.ru](https://angular-universal.ru) *(Server-Side Rendering)*
 
 # Features
 - [x] Uses **[Angular] 6** as universal web application platform
-- [x] Uses **[Angular Material]** as UI components
+- [x] Uses **[Angular Material] 6** as UI components
 - [x] Uses **[module-map-ngfactory-loader] 6** as server side rendering of lazy routes
 - [x] Uses **[angular/cli] 6** as code scaffolder
 - [x] Uses **[webpack] 4** as module bundler
