@@ -11,6 +11,7 @@ module.exports = {
     'src/main.server.ts',
     'tsconfg.json'
   ],
+
   bootstrap(proc, configPath) {
     this.logger.info('[udk] > bootstrap container');
   },
