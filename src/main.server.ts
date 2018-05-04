@@ -11,7 +11,7 @@ import { app } from './app';
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
-const PORT: number | string = process.env.PORT || 3000;
+const PORT: number | string = process.env.PORT || 4000;
 
 let requestListener: (req, res) => void = app;
 

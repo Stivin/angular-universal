@@ -1,4 +1,4 @@
-<img src="https://cloud.githubusercontent.com/assets/1016365/10639063/138338bc-7806-11e5-8057-d34c75f3cafc.png" alt="Angular Universal" height="100"/> Angular Universal Full Starter
+<img src="https://cloud.githubusercontent.com/assets/1016365/10639063/138338bc-7806-11e5-8057-d34c75f3cafc.png" alt="Angular Universal" height="80" /> Angular Universal Full Starter
 ======================================
 [![Angular-RU Universal](https://img.shields.io/badge/Telegram_chat:-Angular_RU_Universal-14b102.svg?style=flat)](https://t.me/angular_universal_ru)
 > Server-Side Rendering for Angular
@@ -8,6 +8,7 @@
 * [Features](#features)
 * [Plans](#plans)
 * [Getting Started](#getting-started)
+    * [Installation](#installation)
 * [Universal "Gotchas"](#universal-gotchas)
 * [License](#license)
 
@@ -24,6 +25,8 @@
 - [x] Uses **[express]** as request handler
 - [x] Uses **[ngx-translate]** to support internationalization (i18n)
 - [x] Uses **[ngx-meta]** for SEO (*title, meta tags, and Open Graph tags for social sharing*)
+- [x] Uses **[hmr]** as Angular Hot Module Replacement
+- [x] Uses **[udk]** as Universal Development Kit
 
 # Plans
 - [ ] @angular/service-worker
@@ -31,16 +34,20 @@
 # Getting Started
 
 ### Installation
-`npm install` or `yarn`
+```
+git clone https://github.com/Stivin/angular-universal.git my-project
+cd my-project
+npm install
+```
 
-### Development (Client-side only rendering)
-Run `npm run start` which will start `ng serve`
+### Development
+**Server-Side Rendering**: `npm run dev`. Navigate to http://localhost:4000.
+**Client-Side Rendering**: `npm run dev:spa`. Navigate to http://localhost:4200.
 
-### Production (also for testing SSR/Pre-rendering locally)
-**`npm run build:ssr && npm run serve:ssr`** - Compiles your application and spins up a Node Express to serve your Universal application on `http://localhost:4000`.
+The app will automatically hot-reload on server and browser sides if you change any of the source files.
 
-**`npm run build:prerender && npm run serve:prerender`** - Compiles your application and prerenders your applications files, spinning up a demo http-server so you can view it on `http://localhost:8080`
-**Note**: To deploy your static site to a static hosting platform you will have to deploy the `dist/browser` folder, rather than the usual `dist`
+### Production
+`npm run build:prod`
 
 # Universal "Gotchas"
 
@@ -92,3 +99,5 @@ constructor(element: ElementRef, renderer: Renderer2) {
 [express]: http://expressjs.com/en/4x/api.html
 [ngx-translate]: https://github.com/ngx-translate/core
 [ngx-meta]: https://github.com/fulls1z3/ngx-meta
+[hmr]: https://github.com/gdi2290/angular-hmr
+[udk]: https://github.com/enten/udk
