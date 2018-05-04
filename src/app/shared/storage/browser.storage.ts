@@ -12,22 +12,24 @@ export class BrowserStorage implements Storage {
   // }
 
   public clear(): void {
-    this._cookieService.deleteAll();
+    // this._cookieService.deleteAll();
   }
 
   public getItem(key: string): string {
-    return this._cookieService.get(key);
+    // return this._cookieService.get(key);
+    return 'test get item';
   }
 
   public key(index: number): string {
-    return this._cookieService.getAll().propertyIsEnumerable[index];
+    // return this._cookieService.getAll().propertyIsEnumerable[index];
+    return 'test key';
   }
 
   public removeItem(key: string): void {
-    this._cookieService.delete(key);
+    // this._cookieService.delete(key);
   }
 
   public setItem(key: string, data: string): void {
-    this._cookieService.set(key, data);
+    // this._cookieService.set(key, data);
   }
 }

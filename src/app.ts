@@ -23,12 +23,12 @@ const INDEX_HTML: string = readFileSync(INDEX_HTML_PATH).toString();
 
 app.engine('html', (_, options, callback) => {
   renderModuleFactory(AppServerModuleNgFactory || AppServerModule, {
-    // Our index.html
     document: INDEX_HTML,
     url: options.req.url,
-    // DI so that we can get lazy-loading to work differently (since we need it to just instantly render it)
     extraProviders: [
-      provideModuleMap(LAZY_MODULE_MAP)
+      provideModuleMap(LAZY_MODULE_MAP),
+      { provide: REQUEST, useValue: options.req },
+      { provide: RESPONSE, useValue: options.res },
     ]
   }).then(html => {
     callback(null, html);
@@ -48,6 +48,6 @@ app.get('*', (req, res) => {
     providers: [
       { provide: REQUEST, useValue: (req) },
       { provide: RESPONSE, useValue: (res) },
-    ]
+    ],
   });
 });

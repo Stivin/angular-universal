@@ -38,9 +38,7 @@ function bootstrapWithHmr(boot: () => Promise<NgModuleRef<any>>) {
 }
 
 function main() {
-  bootstrap(() => platformBrowserDynamic().bootstrapModule(AppBrowserModule))
-    .then(() => console.log('AppModule bootstrap!'))
-    .catch(console.error);
+  bootstrap(() => platformBrowserDynamic().bootstrapModule(AppBrowserModule)).catch(console.error);
 }
 
 if (document.readyState === 'loading') {
