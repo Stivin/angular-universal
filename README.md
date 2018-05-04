@@ -24,9 +24,9 @@
 - [x] Uses **[node]** as server
 - [x] Uses **[express]** as request handler
 - [x] Uses **[ngx-translate]** to support internationalization (i18n)
-- [x] Uses **[ngx-meta]** for SEO (*title, meta tags, and Open Graph tags for social sharing*)
-- [x] Uses **[hmr]** as Angular Hot Module Replacement
-- [x] Uses **[udk]** as Universal Development Kit
+- [x] Uses **[ngx-meta]** for SEO *(title, meta tags, and Open Graph tags for social sharing)*
+- [x] Uses **[hmr]** *(Hot Module Replacement)* as hot module reloading for Webpack and Angular
+- [x] Uses **[udk]** *(Universal Development Kit)* as Webpack extension which improves universal application development
 
 # Plans
 - [ ] @angular/service-worker
@@ -40,9 +40,17 @@ cd my-project
 npm install
 ```
 
-### Development
-**Server-Side Rendering**: `npm run dev`. Navigate to http://localhost:4000.
-**Client-Side Rendering**: `npm run dev:spa`. Navigate to http://localhost:4200.
+### Development server
+
+##### Server-Side Rendering
+`npm run dev`
+Navigate to http://localhost:4000
+The universal dev server which enable SSR (build browser and server targets)
+
+##### Client-Side Rendering
+`npm run dev:spa`
+Navigate to http://localhost:4200
+The SPA dev server which is a webpack dev server (build browser target only).
 
 The app will automatically hot-reload on server and browser sides if you change any of the source files.
 
