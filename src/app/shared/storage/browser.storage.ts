@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { CookieService } from 'ngx-cookie-service';
+// import { CookieService } from 'ngx-cookie-service';
 
 @Injectable()
 export class BrowserStorage implements Storage {
@@ -8,8 +8,8 @@ export class BrowserStorage implements Storage {
   [key: string]: any;
   length: number;
 
-  constructor(private _cookieService: CookieService) {
-  }
+  // constructor(private _cookieService: CookieService) {
+  // }
 
   public clear(): void {
     this._cookieService.deleteAll();

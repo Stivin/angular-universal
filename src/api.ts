@@ -2,7 +2,6 @@ import { join } from 'path';
 import { readFileSync } from 'fs';
 
 import { renderModuleFactory } from '@angular/platform-server';
-
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 
 import * as express from 'express';
@@ -11,7 +10,7 @@ import * as express from 'express';
 export const api = express();
 
 // const PORT = process.env.PORT || 4000;
-const DIST_BROWSER_FOLDER = join(process.cwd(),  'dist', 'app', 'browser');
+const DIST_BROWSER_FOLDER = join(process.cwd(), 'dist', 'app', 'browser');
 const INDEX_HTML_PATH = join(DIST_BROWSER_FOLDER, 'index.html');
 
 // Our index.html we'll use as our template

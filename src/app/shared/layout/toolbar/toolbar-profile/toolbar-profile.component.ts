@@ -1,7 +1,7 @@
 import { Component, ElementRef, HostListener, Inject, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
-import { APP_STORAGE } from '../../../storage/storage.inject';
+// import { APP_STORAGE } from '../../../storage/storage.inject';
 
 const DARK_THEME: string = 'dark-theme';
 const APP_STORAGE_IS_DARK_THEME: string = 'isDarkTheme';
@@ -15,7 +15,7 @@ export class ToolbarProfileComponent implements OnInit {
   public isShowMenu: boolean = false;
   public darkThemeControl: FormControl = new FormControl();
 
-  constructor(@Inject(APP_STORAGE) private _appStorage: Storage,
+  constructor(// @Inject(APP_STORAGE) private _appStorage: Storage,
               private _renderer: Renderer2) {
   }
 
@@ -28,9 +28,9 @@ export class ToolbarProfileComponent implements OnInit {
   }
 
   private _initTheme(): void {
-    const isDarkTheme: boolean = this._appStorage.getItem(APP_STORAGE_IS_DARK_THEME) === 'true';
-    this.darkThemeControl.setValue(isDarkTheme);
-    this.changeDarkTheme(isDarkTheme);
+    // const isDarkTheme: boolean = this._appStorage.getItem(APP_STORAGE_IS_DARK_THEME) === 'true';
+    // this.darkThemeControl.setValue(isDarkTheme);
+    // this.changeDarkTheme(isDarkTheme);
   }
 
   public toggleDarkTheme(isDarkTheme: boolean): void {
@@ -40,7 +40,7 @@ export class ToolbarProfileComponent implements OnInit {
   }
 
   public changeDarkTheme(isDarkTheme: boolean): void {
-    this._appStorage.setItem(APP_STORAGE_IS_DARK_THEME, String(isDarkTheme));
+    // this._appStorage.setItem(APP_STORAGE_IS_DARK_THEME, String(isDarkTheme));
     if (isDarkTheme) {
       // this._renderer.addClass(document.body, DARK_THEME);
     } else {

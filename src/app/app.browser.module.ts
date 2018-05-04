@@ -24,10 +24,10 @@ export function getRequest(): any {
     BrowserTransferStateModule,
     TranslateBrowserModule,
   ],
-  providers: [
-    { provide: REQUEST, useFactory: (getRequest) },
-    { provide: APP_STORAGE, useClass: BrowserStorage },
-  ],
+  // providers: [
+  //   { provide: REQUEST, useFactory: (getRequest) },
+  //   { provide: APP_STORAGE, useClass: BrowserStorage },
+  // ],
   bootstrap: [AppComponent],
 })
 export class AppBrowserModule {
