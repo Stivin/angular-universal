@@ -13,10 +13,10 @@ enableProdMode();
 
 const PORT: number | string = process.env.PORT || 3000;
 
-let requestListener = app;
+let requestListener: (req, res) => void = app;
 
 // Start up the Node server
-const server: Server = createServer((req: IncomingMessage, res: ServerResponse) => {
+const server: Server = createServer((req: IncomingMessage, res: ServerResponse): void => {
   requestListener(req, res);
 });
 
@@ -25,7 +25,7 @@ server.listen(PORT, () => {
 });
 
 if (module['hot']) {
-  module['hot'].accept('./app', () => {
+  module['hot'].accept('./app', (): void => {
     requestListener = require('./app').app;
   });
 }
