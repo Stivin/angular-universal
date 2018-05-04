@@ -9,6 +9,8 @@
 * [Plans](#plans)
 * [Getting Started](#getting-started)
     * [Installation](#installation)
+    * [Development Server](#development-server)
+    * [Build](#build)
 * [Universal "Gotchas"](#universal-gotchas)
 * [License](#license)
 
@@ -40,20 +42,21 @@ cd my-project
 npm install
 ```
 
-### Development server
+### Development Server
 
-##### Server-Side Rendering
+#### Server-Side Rendering
 Run `npm run dev` for a universal dev server. Navigate to http://localhost:4000 <br>
 The universal dev server which enable SSR (build browser and server targets) <br>
 The app will automatically hot-reload on server and browser sides if you change any of the source files.
 
-##### Client-Side Rendering
+#### Client-Side Rendering
 Run `npm run dev:spa` for a SPA dev server. Navigate to http://localhost:4200 <br>
 The SPA dev server which is a webpack dev server (build browser target only). <br>
 The app will automatically reload if you change any of the browser source files.
 
-### Production
-`npm run build:prod`
+### Build
+Run `npm run build` for a build
+Run `npm run build:prod` for a production build
 
 # Universal "Gotchas"
 
