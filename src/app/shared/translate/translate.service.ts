@@ -1,7 +1,7 @@
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
-// import { REQUEST } from '@nguniversal/express-engine/tokens';
+import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { TranslateService as NGXTranslateService } from '@ngx-translate/core';
 import { MetaService } from '@ngx-meta/core';
 import { Observable, of } from 'rxjs';

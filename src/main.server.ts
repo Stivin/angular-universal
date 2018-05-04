@@ -6,14 +6,14 @@ import { createServer, IncomingMessage, Server, ServerResponse } from 'http';
 
 import { enableProdMode } from '@angular/core';
 
-import { api } from './api';
+import { app } from './app';
 
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
 const PORT: number | string = process.env.PORT || 3000;
 
-let requestListener = api;
+let requestListener = app;
 
 // Start up the Node server
 const server: Server = createServer((req: IncomingMessage, res: ServerResponse) => {
@@ -25,8 +25,8 @@ server.listen(PORT, () => {
 });
 
 if (module['hot']) {
-  module['hot'].accept('./api', () => {
-    requestListener = require('./api').api;
+  module['hot'].accept('./app', () => {
+    requestListener = require('./app').app;
   });
 }
 

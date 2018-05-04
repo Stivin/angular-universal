@@ -8,6 +8,7 @@ import { ApiService } from '../shared/services/api.service';
 })
 export class HomeComponent implements OnInit {
   public result: any;
+  public text: string = 'test 7';
 
   constructor(private _apiService: ApiService) {
   }

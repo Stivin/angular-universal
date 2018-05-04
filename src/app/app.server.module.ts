@@ -20,9 +20,9 @@ import { AppComponent } from './app.component';
     ModuleMapLoaderModule,
     TranslateServerModule,
   ],
-  // providers: [
-  //   { provide: APP_STORAGE, useClass: ServerStorage }
-  // ],
+  providers: [
+    { provide: APP_STORAGE, useClass: ServerStorage }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppServerModule {
