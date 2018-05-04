@@ -8,13 +8,7 @@ import { MaterialModule } from '../material';
 
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import {
-  ToolbarComponent,
-  ToolbarLangComponent,
-  ToolbarLogoComponent,
-  ToolbarMenuComponent,
-  ToolbarProfileComponent
-} from './toolbar';
+import { ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent } from './toolbar';
 import { WrapperCommonComponent, WrapperNotFoundComponent } from './wrapper';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -29,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     FooterComponent,
     HeaderComponent,
-    ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent, ToolbarProfileComponent,
+    ToolbarComponent, ToolbarLangComponent, ToolbarLogoComponent, ToolbarMenuComponent,
     WrapperCommonComponent, WrapperNotFoundComponent,
   ],
   exports: [

@@ -16,7 +16,7 @@ const PORT: number | string = process.env.PORT || 3000;
 let requestListener: (req, res) => void = app;
 
 // Start up the Node server
-const server: Server = createServer((req: IncomingMessage, res: ServerResponse): void => {
+const server: Server = createServer((req: IncomingMessage, res: ServerResponse) => {
   requestListener(req, res);
 });
 
@@ -25,7 +25,7 @@ server.listen(PORT, () => {
 });
 
 if (module['hot']) {
-  module['hot'].accept('./app', (): void => {
+  module['hot'].accept('./app', () => {
     requestListener = require('./app').app;
   });
 }
