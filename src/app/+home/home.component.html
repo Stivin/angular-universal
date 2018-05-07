@@ -6,7 +6,7 @@
         <div class="home-desc">
             <h1>Angular Universal</h1>
             <h4 class="tagline">Server-side Rendering</h4>
-            <a mat-raised-button [routerLink]="['/quickstart']">
+            <a mat-raised-button [routerLink]="['/guide']">
                 {{ 'HOME.BUTTON_GET_STARTED' | translate }}
             </a>
         </div>
@@ -25,7 +25,7 @@
 </mat-card>
 
 <div class="home-wrapper">
-    <button mat-raised-button color="primary">
+    <a mat-raised-button color="primary" [routerLink]="['/guide']">
         {{ 'HOME.BUTTON_GET_STARTED' | translate }}
-    </button>
+    </a>
 </div>
