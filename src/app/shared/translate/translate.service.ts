@@ -54,7 +54,7 @@ export class TranslateService {
       }
     }
     language = language || LANG_DEFAULT;
-    // this._appStorage.setItem(STORAGE_LANG_NAME, language.code);
+    this._appStorage.setItem(STORAGE_LANG_NAME, language.code);
     return language;
   }
 
@@ -72,7 +72,7 @@ export class TranslateService {
     if (lang.code === this._translate.currentLang) {
       return;
     }
-    // this._appStorage.setItem(STORAGE_LANG_NAME, lang.code);
+    this._appStorage.setItem(STORAGE_LANG_NAME, lang.code);
     window.location.reload();
   }
 

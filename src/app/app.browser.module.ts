@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { REQUEST } from '@nguniversal/express-engine/tokens';
+import { CookieService } from 'ngx-cookie-service';
 
 import { APP_STORAGE } from './shared/storage/storage.inject';
 import { BrowserStorage } from './shared/storage/browser.storage';
@@ -25,6 +26,7 @@ export function getRequest(): any {
     TranslateBrowserModule,
   ],
   providers: [
+    CookieService,
     { provide: REQUEST, useFactory: (getRequest) },
     { provide: APP_STORAGE, useClass: BrowserStorage },
   ],

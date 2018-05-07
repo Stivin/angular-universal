@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-// import { CookieService } from 'ngx-cookie-service';
-
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './shared/core.module';
 
@@ -20,9 +18,6 @@ import { AppComponent } from './app.component';
     CoreModule.forRoot(),
   ],
   declarations: [AppComponent],
-  providers: [
-    // CookieService
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
