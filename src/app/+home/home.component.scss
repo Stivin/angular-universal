@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 255px;
   .home-image img {
     width: 480px;
   }
@@ -11,8 +12,7 @@
       font-size: 35px;
     }
     a {
-      //color: #258102;
-      font-weight: 400;
+      color: #258102;
       text-transform: uppercase;
     }
   }

@@ -13,7 +13,7 @@ export const ROUTES: Routes = [
       { path: 'auth', loadChildren: './+auth/auth.module#AuthModule' },
       { path: 'home', loadChildren: './+home/home.module#HomeModule' },
       { path: 'back', loadChildren: './+back/back.module#BackModule' },
-      { path: 'blog', loadChildren: './+blog/blog.module#BlogModule' },
+      { path: 'guide', loadChildren: './+guide/guide.module#GuideModule' },
       {
         path: '**', component: WrapperNotFoundComponent,
         data: { meta: { title: 'NOT_FOUND.TITLE', description: 'NOT_FOUND.DESC' } }

@@ -38,14 +38,26 @@ app-toolbar {
     font-weight: 500;
     padding: 10px;
     .toolbar-logo__link {
+      display: flex;
       color: inherit;
       line-height: 13px;
       text-decoration: none;
-      .toolbar-logo__first {
-        font-size: 16px;
+      img {
+        width: 50px;
       }
-      .toolbar-logo__second {
-        font-size: 12px;
+      .toolbar-logo_link_title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 16px;
+        .toolbar-logo__first {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .toolbar-logo__second {
+          font-size: 12px;
+          font-weight: 400;
+        }
       }
     }
   }
@@ -113,7 +125,7 @@ app-toolbar {
         .toolbar-lang-setting__menu_header {
           color: $color-primary;
           border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-          font-weight: bold;
+          font-weight: 500;
           padding: 5px 5px 10px 15px;
           margin-bottom: 5px;
         }

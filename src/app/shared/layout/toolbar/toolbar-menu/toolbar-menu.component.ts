@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 const LINK_LIST: any[] = [
   { url: '/home', name: 'MENU.HOME' },
   { url: '/back', name: 'MENU.BACK' },
-  { url: '/blog', name: 'MENU.BLOG' },
+  { url: '/guide', name: 'MENU.GUIDE' },
 ];
 
 @Component({

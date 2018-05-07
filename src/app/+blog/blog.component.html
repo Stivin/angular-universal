@@ -1,8 +1,0 @@
-<app-header [title]="'BLOG.TITLE' | translate" [description]="'BLOG.DESC' | translate"></app-header>
-
-<div>
-    <mat-card *ngFor="let item of blogList$ | async">
-        <mat-card-title>{{ item.title }}</mat-card-title>
-        <mat-card-content>{{ item.text }}</mat-card-content>
-    </mat-card>
-</div>

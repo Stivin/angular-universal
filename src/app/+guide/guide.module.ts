@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 
-import { ROUTES } from './blog.routing';
-import { BlogComponent } from './blog.component';
+import { ROUTES } from './guide.routing';
+import { GuideComponent } from './guide.component';
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import { BlogComponent } from './blog.component';
     RouterModule.forChild(ROUTES),
     SharedModule,
   ],
-  declarations: [BlogComponent]
+  declarations: [GuideComponent]
 })
-export class BlogModule {
+export class GuideModule {
 }

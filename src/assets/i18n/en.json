@@ -11,7 +11,7 @@
   "MENU": {
     "HOME": "Home",
     "BACK": "Request for backend",
-    "BLOG": "Blog"
+    "GUIDE": "Guide"
   },
   "LANG": {
     "LANG_WEB_SITE": "Web site language"
@@ -27,9 +27,9 @@
     "GET_REQUEST": "GET request with a delay of 3 seconds",
     "POST_REQUEST": "POST request"
   },
-  "BLOG": {
-    "TITLE": "Blog",
-    "DESC": "Description for the blog page"
+  "GUIDE": {
+    "TITLE": "Guide",
+    "DESC": "Description for the guide page"
   },
   "NOT_FOUND": {
     "TITLE": "Not Found",

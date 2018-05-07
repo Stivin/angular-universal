@@ -1,0 +1,33 @@
+<app-header [title]="'GUIDE.TITLE' | translate" [description]="'GUIDE.DESC' | translate"></app-header>
+
+<mat-card>
+    <mat-card-title>Installation</mat-card-title>
+    <mat-card-content>
+        git clone https://github.com/Stivin/angular-universal.git my-project<br>
+        cd my-project<br>
+        npm install
+    </mat-card-content>
+</mat-card>
+
+<mat-card>
+    <mat-card-title>Development Server</mat-card-title>
+    <mat-card-content>
+        <h3>Server-Side Rendering</h3>
+        Run npm run dev for a universal dev server. Navigate to http://localhost:4000<br>
+        The universal dev server which enable SSR (build browser and server targets)<br>
+        The app will automatically hot-reload on server and browser sides if you change any of the source files.
+
+        <br><br>
+        <h3>Client-Side Rendering</h3>
+        Run npm run dev:spa for a SPA dev server. Navigate to http://localhost:4200<br>
+        The SPA dev server which is a webpack dev server (build browser target only).<br>
+        The app will automatically reload if you change any of the browser source files.
+    </mat-card-content>
+</mat-card>
+
+<mat-card>
+    <mat-card-title>Build</mat-card-title>
+    <mat-card-content>
+        <p>Run npm run build for a build Run npm run build:prod for a production build</p>
+    </mat-card-content>
+</mat-card>
