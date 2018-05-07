@@ -55,7 +55,7 @@ The SPA dev server which is a webpack dev server (build browser target only). <b
 The app will automatically reload if you change any of the browser source files.
 
 ### Build
-Run `npm run build` for a build
+Run `npm run build` for a build<br>
 Run `npm run build:prod` for a production build
 
 # Universal "Gotchas"
