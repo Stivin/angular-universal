@@ -31,7 +31,9 @@
 - [x] Uses **[udk]** (*Universal Development Kit*) as Webpack extension which improves universal application development
 
 # Plans
-- [ ] @angular/service-worker
+- [ ] Configuration utility
+- [ ] PWA (*Progressive Web Apps*)
+- [ ] WebSocket
 
 # Getting Started
 
