@@ -1,7 +1,7 @@
 {
   "name": "ng-universal",
   "short_name": "ng-universal",
-  "theme_color": "#1976d2",
+  "theme_color": "#258102",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",

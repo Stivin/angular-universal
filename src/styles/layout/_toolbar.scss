@@ -36,7 +36,7 @@ app-toolbar {
     color: #fff;
     text-align: center;
     font-weight: 500;
-    padding: 10px;
+    padding: 5px 10px;
     .toolbar-logo__link {
       display: flex;
       color: inherit;
@@ -44,12 +44,14 @@ app-toolbar {
       text-decoration: none;
       img {
         width: 50px;
+        height: 50px;
       }
       .toolbar-logo_link_title {
         display: flex;
         flex-direction: column;
         justify-content: center;
         line-height: 16px;
+        padding-top: 5px;
         .toolbar-logo__first {
           font-size: 16px;
           font-weight: 500;
