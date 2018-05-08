@@ -1,5 +1,16 @@
-<ul>
-    <li *ngFor="let link of linkList">
-        <a [routerLink]="[link.url]" routerLinkActive="active">{{ link.name | translate }}</a>
-    </li>
-</ul>
+<div class="toolbar-menu">
+    <ul>
+        <li *ngFor="let link of navLinks">
+            <a [routerLink]="[link.path]" routerLinkActive="active">{{ link.label | translate }}</a>
+        </li>
+    </ul>
+</div>
+
+<div class="toolbar-menu-mob">
+    <nav mat-tab-nav-bar backgroundColor="primary">
+        <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path"
+           routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+            {{ link.label | translate }}
+        </a>
+    </nav>
+</div>

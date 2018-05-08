@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: center;
   height: 255px;
+  @media (max-width: 950px) {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
   .home-image img {
     width: 480px;
   }

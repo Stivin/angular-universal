@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 
-const LINK_LIST: any[] = [
-  { url: '/home', name: 'MENU.HOME' },
-  { url: '/back', name: 'MENU.BACK' },
-  { url: '/guide', name: 'MENU.GUIDE' },
+import { IToolbarMenu } from './toolbar.interface';
+
+const NAV_LINKS: IToolbarMenu[] = [
+  { path: '/home', label: 'MENU.HOME' },
+  { path: '/back', label: 'MENU.BACK' },
+  { path: '/guide', label: 'MENU.GUIDE' },
 ];
 
 @Component({
@@ -11,5 +13,5 @@ const LINK_LIST: any[] = [
   templateUrl: './toolbar-menu.component.html'
 })
 export class ToolbarMenuComponent {
-  public linkList: any[] = LINK_LIST;
+  public navLinks: IToolbarMenu[] = NAV_LINKS;
 }

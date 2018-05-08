@@ -8,9 +8,13 @@ app-toolbar {
   background-color: $color-primary;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   z-index: 100;
+  @media (max-width: 700px) {
+    height: $toolbar-height + 40px;
+  }
   .toolbar__block_left {
     display: flex;
     flex: 1;
+    height: $toolbar-height;
   }
   .toolbar__github {
     height: inherit;
@@ -63,9 +67,11 @@ app-toolbar {
       }
     }
   }
-  app-toolbar-menu {
-    display: block;
+  .toolbar-menu {
     height: inherit;
+    @media (max-width: 700px) {
+      display: none;
+    }
     ul {
       display: flex;
       height: inherit;
@@ -89,6 +95,28 @@ app-toolbar {
       }
     }
   }
+  .toolbar-menu-mob {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    @media (max-width: 700px) {
+      display: block;
+    }
+    .mat-tab-links {
+      justify-content: space-between;
+      a {
+        flex: 1;
+        &.mat-tab-label-active {
+          opacity: 1;
+        }
+      }
+      .mat-ink-bar {
+        opacity: .6;
+      }
+    }
+  }
   app-toolbar-lang {
     display: block;
     height: inherit;
@@ -99,7 +127,6 @@ app-toolbar {
         cursor: pointer;
         height: inherit;
         color: #fff;
-        border-left: 1px solid rgba(0, 0, 0, 0.1);
         padding-top: 17px;
         padding-left: 17px;
         transition: all .3s ease;

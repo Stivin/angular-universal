@@ -13,8 +13,8 @@
   @include angular-material-theme($app-black-theme);
 }
 
-$candy-app-primary: mat-palette($mat-green, 800);
-$candy-app-accent: mat-palette($mat-green, A200, A100, A400);
+$candy-app-primary: mat-palette($custom-mat-green, 800);
+$candy-app-accent: mat-palette($custom-mat-green, A200, A100, A400);
 $candy-app-warn: mat-palette($mat-red, 700);
 $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
 
