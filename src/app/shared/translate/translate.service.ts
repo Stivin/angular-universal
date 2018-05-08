@@ -12,7 +12,8 @@ import { ILang } from './translate.interface';
 
 const LANG_LIST: ILang[] = [
   { 'code': 'en', 'name': 'English', 'culture': 'en-US' },
-  { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU' }
+  { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU' },
+  { 'code': 'he', 'name': 'עברית', 'culture': 'he-HE' },
 ];
 const LANG_DEFAULT: ILang = { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU' };
 const STORAGE_LANG_NAME: string = 'langCode';

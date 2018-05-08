@@ -1,0 +1,52 @@
+{
+  "APP_NAME": "אנגולר אוניברסלי",
+  "DEFAULT": {
+    "TITLE": "תצוגת אפליקצית אנגולר אוניברסלי",
+    "DESC": "פרויקט עם קוד פתוח לאנגולר אוניברסלי"
+  },
+  "FOOTER": {
+    "AND": "ו",
+    "VERSION": "גרסא הנוכחית: {{value}}"
+  },
+  "MENU": {
+    "HOME": "בית",
+    "BACK": "בקשות",
+    "GUIDE": "מדריך"
+  },
+  "LANG": {
+    "LANG_WEB_SITE": "שפת האתר"
+  },
+  "HOME": {
+    "TITLE": "עמוד הבית",
+    "DESC": "תיאור של עמוד הבית",
+    "BUTTON_GET_STARTED": "התחל"
+  },
+  "BACK": {
+    "TITLE": "בקשה לשרת",
+    "DESC": "תיאור עבור הבקשה backend",
+    "GET_REQUEST": "בקשת GET עם השייה של 3 שניות",
+    "POST_REQUEST": "POST בַּקָשָׁה"
+  },
+  "GUIDE": {
+    "TITLE": "מדריך",
+    "DESC": "תיאור של עמוד המדריך"
+  },
+  "NOT_FOUND": {
+    "TITLE": "לא נמצא",
+    "DESC": "עמוד הזה לא קיים"
+  },
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "",
+      "DESC": ""
+    },
+    "REG": {
+      "TITLE": "",
+      "DESC": ""
+    },
+    "RESTORE": {
+      "TITLE": "",
+      "DESC": ""
+    }
+  }
+}

@@ -23,7 +23,8 @@ export function metaFactory(translate: NGXTranslateService): MetaLoader {
       'og:locale': 'en-US',
       'og:locale:alternate': [
         { 'code': 'en', 'name': 'English', 'culture': 'en-US' },
-        { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU' }
+        { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU' },
+        { 'code': 'he', 'name': 'עברית', 'culture': 'he-HE' }
       ].map((language: ILang) => language.culture).toString()
     }
   });
