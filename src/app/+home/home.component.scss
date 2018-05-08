@@ -9,7 +9,8 @@
     text-align: center;
   }
   .home-image img {
-    width: 480px;
+    max-width: 480px;
+    width: 100%;
   }
   .home-desc {
     margin-left: 20px;
