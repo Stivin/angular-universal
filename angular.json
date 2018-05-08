@@ -69,7 +69,8 @@
           "options": {
             "outputPath": "dist/server",
             "main": "src/app/ngmodule.ts",
-            "tsConfig": "src/tsconfig.server.json"
+            "tsConfig": "src/tsconfig.server.json",
+            "bundleDependencies": "all"
           },
           "configurations": {
             "production": {
