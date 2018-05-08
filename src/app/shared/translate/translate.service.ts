@@ -1,5 +1,5 @@
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { TranslateService as NGXTranslateService } from '@ngx-translate/core';
@@ -20,6 +20,7 @@ const STORAGE_LANG_NAME: string = 'langCode';
 @Injectable()
 export class TranslateService {
   constructor(@Inject(PLATFORM_ID) private _platformId: Object,
+              @Inject(DOCUMENT) private _document: any,
               @Inject(REQUEST) private _request: Request,
               @Inject(NGXTranslateService) private _translate: NGXTranslateService,
               @Inject(MetaService) private _meta: MetaService,
@@ -65,6 +66,7 @@ export class TranslateService {
   private _setLanguage(lang: ILang): void {
     this._translate.use(lang.code).subscribe(() => {
       this._meta.setTag('og:locale', lang.culture);
+      this._document.documentElement.lang = lang.code;
     });
   }
 
