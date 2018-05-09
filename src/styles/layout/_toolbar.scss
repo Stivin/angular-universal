@@ -108,9 +108,7 @@ app-toolbar {
       justify-content: space-between;
       a {
         flex: 1;
-        &.mat-tab-label-active {
-          opacity: 1;
-        }
+        opacity: 1;
       }
       .mat-ink-bar {
         opacity: .6;
