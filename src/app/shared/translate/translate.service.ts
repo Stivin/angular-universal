@@ -10,12 +10,17 @@ import { APP_STORAGE } from '../storage/storage.inject';
 
 import { ILang } from './translate.interface';
 
+export enum HTML_DIR {
+  LTR = 'ltr',
+  RTL = 'rtl',
+}
+
 const LANG_LIST: ILang[] = [
-  { 'code': 'en', 'name': 'English', 'culture': 'en-US' },
-  { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU' },
-  { 'code': 'he', 'name': 'עברית', 'culture': 'he-HE' },
+  { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU', isRTL: false },
+  { 'code': 'en', 'name': 'English', 'culture': 'en-US', isRTL: false },
+  { 'code': 'he', 'name': 'עברית', 'culture': 'he-HE', isRTL: true },
 ];
-const LANG_DEFAULT: ILang = { 'code': 'ru', 'name': 'Русский', 'culture': 'ru-RU' };
+const LANG_DEFAULT: ILang = LANG_LIST[0];
 const STORAGE_LANG_NAME: string = 'langCode';
 
 @Injectable()
@@ -68,6 +73,7 @@ export class TranslateService {
     this._translate.use(lang.code).subscribe(() => {
       this._meta.setTag('og:locale', lang.culture);
       this._document.documentElement.lang = lang.code;
+      this._document.dir = lang.isRTL ? HTML_DIR.RTL : HTML_DIR.LTR;
     });
   }
 

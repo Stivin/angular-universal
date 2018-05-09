@@ -127,8 +127,7 @@ app-toolbar {
         cursor: pointer;
         height: inherit;
         color: #fff;
-        padding-top: 17px;
-        padding-left: 17px;
+        padding: 17px;
         transition: all .3s ease;
         &:hover {
           background-color: rgba(0, 0, 0, 0.1);
