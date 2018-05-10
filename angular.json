@@ -78,7 +78,13 @@
           },
           "configurations": {
             "production": {
-              "bundleDependencies": "all"
+              "bundleDependencies": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
             }
           }
         },
@@ -92,14 +98,7 @@
           "configurations": {
             "production": {
               "browserTarget": "ng-universal:build:production",
-              "serverTarget": "ng-universal:server:production",
-              "verbose": true,
-              "fileReplacements": [
-                {
-                  "src": "src/environments/environment.ts",
-                  "replaceWith": "src/environments/environment.prod.ts"
-                }
-              ]
+              "serverTarget": "ng-universal:server:production"
             }
           }
         },
