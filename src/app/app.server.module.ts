@@ -4,9 +4,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 
+import { APP_STORAGE, ServerStorage } from './shared/storage';
 import { TranslateServerModule } from './shared/translate/translate-server.module';
-import { ServerStorage } from './shared/storage/server.storage';
-import { APP_STORAGE } from './shared/storage/storage.inject';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';

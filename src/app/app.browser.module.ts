@@ -6,8 +6,7 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { CookieService } from 'ngx-cookie-service';
 
-import { APP_STORAGE } from './shared/storage/storage.inject';
-import { BrowserStorage } from './shared/storage/browser.storage';
+import { APP_STORAGE, BrowserStorage } from './shared/storage';
 import { TranslateBrowserModule } from './shared/translate/translate-browser.module';
 
 import { AppModule } from './app.module';
